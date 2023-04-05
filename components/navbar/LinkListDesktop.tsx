@@ -15,9 +15,9 @@ const LinkListDesktop: FC<LinkListDesktopProps> = ({}) => {
       </li>
       <li>
         <Link
-          href='/skills'
+          href='/about'
           className='px-3 py-2 transition-all duration-500 opacity-80 hover:opacity-100'>
-          Skills
+          About
         </Link>
       </li>
       <li>
