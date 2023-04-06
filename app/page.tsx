@@ -4,7 +4,7 @@ import Gradient from '@/components/ui/Gradient';
 
 export default function Home() {
   return (
-    <div className='min-h-screen flex flex-col justify-center relative py-20'>
+    <div className='flex flex-col justify-center relative py-20'>
       <Gradient gradientType='type-1' />
       <Container>
         <Hero />

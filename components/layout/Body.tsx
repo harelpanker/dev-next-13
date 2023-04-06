@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, ReactNode } from 'react';
-import { ThemeProvider } from 'next-themes';
+
 import { useAtom } from 'jotai';
 import isOpen from '@/store/nav-store';
 
@@ -17,7 +17,7 @@ const Body: FC<BodyProps> = ({ children }) => {
       className={`antialiased text-slate-50 bg-black ${
         open ? 'h-screen overflow-hidden' : ''
       }`}>
-      <ThemeProvider attribute='class'>{children}</ThemeProvider>
+      {children}
     </body>
   );
 };
