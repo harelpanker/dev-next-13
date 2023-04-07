@@ -1,47 +1,45 @@
 'use client';
 
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { useAtom } from 'jotai';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { step, personName } from '@/store/form-store';
+import { step, personEmail } from '@/store/form-store';
 import * as yup from 'yup';
 
 const schema = yup
   .object({
-    name: yup.string().required('Name is required'),
+    email: yup
+      .string()
+      .email('Email is not valid')
+      .required('Email is required'),
   })
   .required();
 type FormData = yup.InferType<typeof schema>;
 
-type Step1Props = {};
+type Step2Props = {};
 
-const Step1: FC<Step1Props> = ({}) => {
+const Step2: FC<Step2Props> = ({}) => {
   const [, setState] = useAtom(step);
-  const [, setPersonName] = useAtom(personName);
+  const [, setPersonEmail] = useAtom(personEmail);
 
   const {
     register,
     handleSubmit,
-    setFocus,
     formState: { errors },
   } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
   const onSubmit = (data: FormData) => {
-    setPersonName(data.name);
-    setState(2);
+    setPersonEmail(data.email);
+    setState(3);
   };
-
-  useEffect(() => {
-    setFocus('name');
-  }, [setFocus]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input placeholder='Name' {...register('name')} />
-      {errors.name ? (
-        <p className='text-slate-50'>{errors.name.message}</p>
+      <input placeholder='Email' {...register('email')} />
+      {errors.email ? (
+        <p className='text-slate-50'>{errors.email.message}</p>
       ) : null}
       <button className='relative z-10 p-5 text-slate-50' type='submit'>
         Next {'->'}
@@ -50,4 +48,4 @@ const Step1: FC<Step1Props> = ({}) => {
   );
 };
 
-export default Step1;
+export default Step2;

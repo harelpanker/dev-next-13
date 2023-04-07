@@ -14,6 +14,7 @@ import {
 } from '@/store/form-store';
 import * as yup from 'yup';
 import Step1 from './Step1';
+import Step2 from './Step2';
 
 const schema = yup
   .object({
@@ -62,19 +63,7 @@ const Form: FC<FormProps> = ({}) => {
             {/* step 1 */}
             {state === 1 ? <Step1 /> : null}
             {/* step 2 */}
-            {state === 2 ? (
-              <div>
-                <input type='email' {...register('email')} />
-                <button
-                  type='button'
-                  onClick={() => {
-                    setState(3);
-                    setFocus('message');
-                  }}>
-                  Next
-                </button>
-              </div>
-            ) : null}
+            {state === 2 ? <Step2 /> : null}
             {/* step 3 */}
             {state === 3 ? (
               <div>
