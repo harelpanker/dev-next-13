@@ -1,6 +1,7 @@
+import { FC } from 'react';
+import Form from '@/components/contact/Form';
 import Hero from '@/components/contact/Hero';
 import Gradient from '@/components/ui/Gradient';
-import { FC } from 'react';
 
 type pageProps = {};
 
@@ -10,6 +11,7 @@ const page: FC<pageProps> = ({}) => {
       <Gradient gradientType='type-4' />
       <div className='flex flex-col gap-10 lg:gap-24'>
         <Hero />
+        <Form />
       </div>
     </div>
   );
