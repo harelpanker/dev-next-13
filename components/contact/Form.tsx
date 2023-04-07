@@ -5,16 +5,11 @@ import { useForm } from 'react-hook-form';
 import { useAtom } from 'jotai';
 import Container from '../ui/Container';
 import { yupResolver } from '@hookform/resolvers/yup';
-import {
-  step,
-  success,
-  personName,
-  personEmail,
-  personMessage,
-} from '@/store/form-store';
+import { step, success } from '@/store/form-store';
 import * as yup from 'yup';
 import Step1 from './Step1';
 import Step2 from './Step2';
+import Step3 from './Step3';
 
 const schema = yup
   .object({
@@ -31,25 +26,12 @@ type FormData = yup.InferType<typeof schema>;
 type FormProps = {};
 
 const Form: FC<FormProps> = ({}) => {
-  const [state, setState] = useAtom(step);
-  const [isSuccess, setIsSuccess] = useAtom(success);
+  const [state] = useAtom(step);
+  const [isSuccess] = useAtom(success);
 
-  const {
-    register,
-    handleSubmit,
-
-    setFocus,
-    formState: { errors },
-  } = useForm<FormData>({
+  const { setFocus } = useForm<FormData>({
     resolver: yupResolver(schema),
-    mode: 'onChange',
-    reValidateMode: 'onBlur',
   });
-  const onSubmit1 = (data: FormData) => {
-    console.log(data);
-    setState(2);
-    setFocus('email');
-  };
 
   useEffect(() => {
     setFocus('name');
@@ -60,17 +42,9 @@ const Form: FC<FormProps> = ({}) => {
       <Container>
         {!isSuccess ? (
           <>
-            {/* step 1 */}
             {state === 1 ? <Step1 /> : null}
-            {/* step 2 */}
             {state === 2 ? <Step2 /> : null}
-            {/* step 3 */}
-            {state === 3 ? (
-              <div>
-                <textarea {...register('message')} />
-                <input type='submit' />
-              </div>
-            ) : null}
+            {state === 3 ? <Step3 /> : null}
           </>
         ) : (
           <div>

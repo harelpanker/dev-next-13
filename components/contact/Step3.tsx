@@ -4,27 +4,21 @@ import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { useAtom } from 'jotai';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { step, personEmail } from '@/store/form-store';
+import { success, personMessage } from '@/store/form-store';
 import * as yup from 'yup';
-
-const emailRegExp = /^\S+@\S+\.\S+$/;
 
 const schema = yup
   .object({
-    email: yup
-      .string()
-      .email('Email must be a valid email')
-      .matches(emailRegExp, 'Email is not valid')
-      .required('Email is required'),
+    message: yup.string().required('Message is required'),
   })
   .required();
 type FormData = yup.InferType<typeof schema>;
 
-type Step2Props = {};
+type Step3Props = {};
 
-const Step2: FC<Step2Props> = ({}) => {
-  const [, setState] = useAtom(step);
-  const [, setPersonEmail] = useAtom(personEmail);
+const Step3: FC<Step3Props> = ({}) => {
+  const [, setSuccess] = useAtom(success);
+  const [, setPersonMessage] = useAtom(personMessage);
 
   const {
     register,
@@ -33,22 +27,26 @@ const Step2: FC<Step2Props> = ({}) => {
   } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
+
   const onSubmit = (data: FormData) => {
-    setPersonEmail(data.email);
-    setState(3);
+    setPersonMessage(data.message);
+    setSuccess(true);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input placeholder='Email' {...register('email')} />
-      {errors.email ? (
-        <p className='text-slate-50'>{errors.email.message}</p>
+      <textarea
+        placeholder='How can I help you and what is the best way to reach you'
+        {...register('message')}
+      />
+      {errors.message ? (
+        <p className='text-slate-50'>{errors.message.message}</p>
       ) : null}
       <button className='relative z-10 p-5 text-slate-50' type='submit'>
-        Next {'->'}
+        Submit {'->'}
       </button>
     </form>
   );
 };
 
-export default Step2;
+export default Step3;
