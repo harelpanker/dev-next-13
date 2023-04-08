@@ -11,6 +11,7 @@ type RootProps = {
 export const metadata = {
   title: 'Harel Panker | Frontend Developer',
   description: "Hi! My name is Harel and I'm a front end web developer",
+  themeColor: 'black',
   metadataBase: new URL('https://www.panker.dev'),
   alternates: {
     canonical: '/',
@@ -25,7 +26,7 @@ export const metadata = {
     siteName: 'panker.dev',
     images: [
       {
-        url: 'https://nextjs.org/og-image.png',
+        url: '../public/og-image.png',
         width: 1200,
         height: 630,
         alt: 'panker.dev',
@@ -35,11 +36,11 @@ export const metadata = {
     type: 'website',
   },
   icons: {
-    icon: 'public/32.png',
-    apple: 'public/256.png',
+    icon: '../public/32.png',
+    apple: '../public/256.png',
     other: {
       rel: 'apple-touch-icon-precomposed',
-      url: 'public/256.png',
+      url: '../public/256.png',
     },
   },
 };
