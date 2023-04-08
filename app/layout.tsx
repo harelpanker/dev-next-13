@@ -26,7 +26,7 @@ export const metadata = {
     siteName: 'panker.dev',
     images: [
       {
-        url: '../public/og-image.png',
+        url: 'https://res.cloudinary.com/dmcmglu0n/image/upload/v1680968324/og-image_k6j30f.png',
         width: 1200,
         height: 630,
         alt: 'panker.dev',
@@ -36,11 +36,12 @@ export const metadata = {
     type: 'website',
   },
   icons: {
-    icon: '../public/32.png',
-    apple: '../public/256.png',
+    icon: 'https://res.cloudinary.com/dmcmglu0n/image/upload/v1680968325/32_yobuyl.png',
+    apple:
+      'https://res.cloudinary.com/dmcmglu0n/image/upload/v1680968324/256_y7erbo.png',
     other: {
       rel: 'apple-touch-icon-precomposed',
-      url: '../public/256.png',
+      url: 'https://res.cloudinary.com/dmcmglu0n/image/upload/v1680968324/256_y7erbo.png',
     },
   },
 };
