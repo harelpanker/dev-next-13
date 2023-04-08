@@ -7,7 +7,6 @@ import Container from '../ui/Container';
 import LinkListDesktop from './LinkListDesktop';
 import Logo from './Logo';
 import MobileButton from './MobileButton';
-import SocialMedia from './SocialMedia';
 import MobileMenu from './MobileMenu';
 
 type NavbarProps = {};
@@ -17,13 +16,10 @@ const Navbar: FC<NavbarProps> = ({}) => {
   return (
     <header className='min-h-[70px] w-full sticky top-0 flex items-center z-50 border-b border-slate-200/40'>
       <Container>
-        <nav className='lg:grid lg:grid-cols-3 flex items-center justify-between relative z-50'>
+        <nav className='flex items-center justify-between relative z-50'>
           <Logo />
-          <div className='hidden lg:flex lg:justify-center'>
+          <div className='hidden lg:flex'>
             <LinkListDesktop />
-          </div>
-          <div className='hidden lg:flex lg:justify-end'>
-            <SocialMedia />
           </div>
           <MobileButton />
         </nav>

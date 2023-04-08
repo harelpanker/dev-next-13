@@ -10,7 +10,38 @@ type RootProps = {
 
 export const metadata = {
   title: 'Harel Panker | Frontend Developer',
-  description: '',
+  description: "Hi! My name is Harel and I'm a front end web developer",
+  metadataBase: new URL('https://www.panker.dev'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+    },
+  },
+  openGraph: {
+    title: 'Harel Panker | Frontend Developer',
+    description: "Hi! My name is Harel and I'm a front end web developer",
+    url: 'https://nextjs.org',
+    siteName: 'panker.dev',
+    images: [
+      {
+        url: 'https://nextjs.org/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'panker.dev',
+      },
+    ],
+    locale: 'en-US',
+    type: 'website',
+  },
+  icons: {
+    icon: 'public/32.png',
+    apple: 'public/256.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: 'public/256.png',
+    },
+  },
 };
 
 const general = localFont({
