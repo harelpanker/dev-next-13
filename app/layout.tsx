@@ -44,6 +44,15 @@ export const metadata = {
       url: 'https://res.cloudinary.com/dmcmglu0n/image/upload/v1680968324/256_y7erbo.png',
     },
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Harel Panker | Frontend Developer',
+    description: "Hi! My name is Harel and I'm a front end web developer",
+    creator: '@Harel89098978',
+    images: [
+      'https://res.cloudinary.com/dmcmglu0n/image/upload/v1680968324/og-image_k6j30f.png',
+    ],
+  },
 };
 
 const general = localFont({
