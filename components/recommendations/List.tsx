@@ -22,7 +22,11 @@ const List: FC<ListProps> = ({ data }) => {
               <p className='font-serif text-2xl lg:text-4xl font-medium text-slate-50/80 mb-8'>
                 {item.quote}
               </p>
-              <div className='flex items-center gap-5'>
+              <a
+                href={item.linkedin}
+                target='_blank'
+                rel='noopener'
+                className='flex items-center gap-5'>
                 <Image
                   className='rounded-full p-1 border border-slate-50/50 w-24 h-24 lg:w-auto lg:h-auto'
                   src={item.profileImage.url}
@@ -34,7 +38,7 @@ const List: FC<ListProps> = ({ data }) => {
                   <h2 className='font-bold text-xl'>{item.name}</h2>
                   <p className='text-slate-50/90'>{item.position}</p>
                 </div>
-              </div>
+              </a>
             </blockquote>
           </li>
         ))}
