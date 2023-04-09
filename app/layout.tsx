@@ -3,7 +3,6 @@ import localFont from 'next/font/local';
 import Navbar from '@/components/navbar/Navbar';
 import Body from '@/components/layout/Body';
 import Footer from '@/components/footer/Footer';
-import GoogleTagManeger from '@/utils/GoogleTagManager';
 
 type RootProps = {
   children: React.ReactNode;
@@ -85,7 +84,6 @@ export default function RootLayout({ children }: RootProps) {
           <Footer />
         </div>
       </Body>
-      <GoogleTagManeger />
     </html>
   );
 }
