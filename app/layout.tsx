@@ -37,7 +37,7 @@ export const metadata = {
     type: 'website',
   },
   icons: {
-    icon: 'https://res.cloudinary.com/dmcmglu0n/image/upload/v1680968325/32_yobuyl.png',
+    icon: 'https://res.cloudinary.com/dmcmglu0n/image/upload/v1681043882/32_zc4ngz.png',
     apple:
       'https://res.cloudinary.com/dmcmglu0n/image/upload/v1680968324/256_y7erbo.png',
     other: {
