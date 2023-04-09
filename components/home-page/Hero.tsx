@@ -16,7 +16,7 @@ const Hero: FC<HeroProps> = ({}) => {
         functional visual storytelling and purposeful user interfaces.
       </p>
       <div className='flex'>
-        <MainButton link='/about' text='Learn more' />
+        <MainButton link='/about' text='My skill set' />
       </div>
     </header>
   );
