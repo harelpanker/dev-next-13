@@ -1,7 +1,6 @@
-import Gradient from '@/components/ui/Gradient';
-
 import Hero from '@/components/about/Hero';
 import Images from '@/components/about/Images';
+import Gradient from '@/components/ui/Gradient';
 
 export default async function Page() {
   return (
