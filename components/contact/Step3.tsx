@@ -1,6 +1,6 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useAtom } from 'jotai';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -31,6 +31,7 @@ const Step3: FC<Step3Props> = ({}) => {
   const {
     register,
     handleSubmit,
+    setFocus,
     formState: { errors },
   } = useForm<FormData>({
     resolver: yupResolver(schema),
@@ -58,6 +59,10 @@ const Step3: FC<Step3Props> = ({}) => {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    setFocus('message');
+  }, [setFocus]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

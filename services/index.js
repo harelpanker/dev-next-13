@@ -22,3 +22,26 @@ export const getWork = async () => {
 
   return result.works;
 };
+
+export const getRecommendations = async () => {
+  const RECOMMENDATIONS_QUERY = gql`
+    {
+      recommendations {
+        id
+        name
+        position
+        linkedin
+        quote
+        profileImage {
+          url
+          width
+          height
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, RECOMMENDATIONS_QUERY);
+
+  return result.recommendations;
+};

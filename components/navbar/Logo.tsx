@@ -10,7 +10,7 @@ const Logo: FC<LogoProps> = ({}) => {
   return (
     <Link className='font-semibold' href='/'>
       <Image
-        className='max-h-[45px] w-auto'
+        className='h-[45px] w-auto'
         src={logo}
         alt='Site logo - Harel Panker front end developer'
       />

@@ -20,6 +20,13 @@ const LinkListDesktop: FC<LinkListDesktopProps> = ({}) => {
           About
         </Link>
       </li>
+      <li>
+        <Link
+          href='/recommendations'
+          className='px-3 py-2 transition-all duration-500 opacity-80 hover:opacity-100'>
+          Recommendations
+        </Link>
+      </li>
       <li className='mt-10 lg:mt-0'>
         <Link
           href='/contact'

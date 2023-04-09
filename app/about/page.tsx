@@ -1,7 +1,7 @@
 import Gradient from '@/components/ui/Gradient';
 
-import Hero from '@/components/About/Hero';
-import Images from '@/components/About/Images';
+import Hero from '@/components/about/Hero';
+import Images from '@/components/about/Images';
 
 export default async function Page() {
   return (
