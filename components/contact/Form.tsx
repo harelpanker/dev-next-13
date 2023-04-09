@@ -2,7 +2,6 @@
 
 import { FC } from 'react';
 import { useAtom } from 'jotai';
-import Container from '../ui/Container';
 import { step, success } from '@/store/form-store';
 import Step1 from './Step1';
 import Step2 from './Step2';
@@ -23,11 +22,7 @@ const Form: FC<FormProps> = ({}) => {
             {state === 2 ? <Step2 /> : null}
             {state === 3 ? <Step3 /> : null}
           </>
-        ) : (
-          <div className='text-white'>
-            <h2>Thanks you!</h2>
-          </div>
-        )}
+        ) : null}
       </div>
     </section>
   );
