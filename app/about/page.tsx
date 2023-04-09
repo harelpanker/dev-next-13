@@ -1,5 +1,5 @@
-import Hero from '@/components/about/Hero';
-import Images from '@/components/about/Images';
+import Hero from '@/components/About/Hero';
+import Images from '@/components/About/Images';
 import Gradient from '@/components/ui/Gradient';
 
 export default async function Page() {
