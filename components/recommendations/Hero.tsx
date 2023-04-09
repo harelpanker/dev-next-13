@@ -9,7 +9,7 @@ const Hero: FC<HeroProps> = ({}) => {
         Recommendations
       </h1>
       <p className='text-sm md:text-lg font-medium text-slate-100/80 max-w-xl'>
-        Some of what my clients have to say :)
+        Some of what my clients have to say
       </p>
     </header>
   );

@@ -12,7 +12,7 @@ const Hero: FC<HeroProps> = ({}) => {
       </h1>
       <p className='text-sm md:text-lg font-medium text-slate-100/80 max-w-xl'>
         Over the past 3 years, I&apos;ve worked with leading agencies and
-        startups to develop products that help meet user needs through
+        startups to develop products that help meet users needs through
         functional visual storytelling and purposeful user interfaces.
       </p>
       <div className='flex'>
