@@ -5,7 +5,7 @@ type HeroProps = {};
 
 const Hero: FC<HeroProps> = ({}) => {
   return (
-    <header className='flex flex-col gap-6 items-center text-center py-28'>
+    <header className='flex flex-col gap-6 items-center text-center lg:py-28'>
       <h1 className='text-4xl font-serif md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-slate-50 via-slate-100 to-slate-400'>
         Harel Panker
         <br /> Front-End Developer
