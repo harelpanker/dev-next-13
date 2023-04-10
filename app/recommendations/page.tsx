@@ -5,6 +5,21 @@ import Gradient from '@/components/ui/Gradient';
 
 import { getRecommendations } from '@/services';
 
+export const metadata = {
+  title: 'Recommendations',
+  description: 'Some of what my clients have to say',
+  metadataBase: new URL('https://www.panker.dev/recommendations'),
+  openGraph: {
+    title: 'Recommendations',
+    description: 'Some of what my clients have to say',
+    url: 'https://www.panker.dev/recommendations',
+  },
+  twitter: {
+    title: 'Recommendations',
+    description: 'Some of what my clients have to say',
+  },
+};
+
 const getData = async () => {
   const recommendations = (await getRecommendations()) || [];
   return recommendations;

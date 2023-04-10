@@ -5,6 +5,21 @@ import Gradient from '@/components/ui/Gradient';
 
 type pageProps = {};
 
+export const metadata = {
+  title: 'Contact me',
+  description: 'Feel free to drop me a line',
+  metadataBase: new URL('https://www.panker.dev/contact'),
+  openGraph: {
+    title: 'Contact me',
+    description: 'Feel free to drop me a line',
+    url: 'https://www.panker.dev/contact',
+  },
+  twitter: {
+    title: 'Contact me',
+    description: 'Feel free to drop me a line',
+  },
+};
+
 const page: FC<pageProps> = ({}) => {
   return (
     <div className='flex flex-col pt-16 md:pt-36 relative'>

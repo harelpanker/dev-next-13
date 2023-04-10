@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     title: 'Harel Panker | Frontend Developer',
     description: "Hi! My name is Harel and I'm a front end web developer",
-    url: 'https://nextjs.org',
+    url: 'https://www.panker.dev',
     siteName: 'panker.dev',
     images: [
       {
