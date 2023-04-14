@@ -2,7 +2,6 @@ import Hero from '@/components/recommendations/Hero';
 import List from '@/components/recommendations/List';
 import Container from '@/components/ui/Container';
 import Gradient from '@/components/ui/Gradient';
-import PageWrapper from '@/components/ui/PageWrapper';
 
 import { getRecommendations } from '@/services';
 
@@ -32,16 +31,15 @@ export default async function Page() {
   return (
     <div className='flex flex-col pt-16 md:pt-36 relative'>
       <Gradient gradientType='type-2' />
-      <PageWrapper>
-        <div className='flex flex-col gap-10 lg:gap-24 relative z-20'>
-          <Hero />
-          <section>
-            <Container>
-              <List data={data} />
-            </Container>
-          </section>
-        </div>
-      </PageWrapper>
+
+      <div className='flex flex-col gap-10 lg:gap-24 relative z-20'>
+        <Hero />
+        <section>
+          <Container>
+            <List data={data} />
+          </Container>
+        </section>
+      </div>
     </div>
   );
 }
