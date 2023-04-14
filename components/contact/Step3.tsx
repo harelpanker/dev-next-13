@@ -1,10 +1,9 @@
 'use client';
 
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { useAtom } from 'jotai';
 import { yupResolver } from '@hookform/resolvers/yup';
-import emailjs from '@emailjs/browser';
 import {
   success,
   personMessage,
@@ -23,6 +22,7 @@ type FormData = yup.InferType<typeof schema>;
 type Step3Props = {};
 
 const Step3: FC<Step3Props> = ({}) => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const [, setSuccess] = useAtom(success);
   const [, setPersonMessage] = useAtom(personMessage);
   const [person] = useAtom(personName);
@@ -38,26 +38,29 @@ const Step3: FC<Step3Props> = ({}) => {
   });
 
   const onSubmit = (data: FormData) => {
-    const formData = {
-      name: person,
-      email: userEmail,
-      message: data.message,
-    };
-    try {
-      emailjs
-        .send(
-          'service_eippq17',
-          'template_97gnqcf',
-          formData,
-          'user_STfBVK8y2ICUJEb9CbPIR'
-        )
-        .then(() => {
-          setPersonMessage(data.message);
-          setSuccess(true);
-        });
-    } catch (error) {
-      console.log(error);
+    if (buttonRef.current !== null) {
+      buttonRef.current.disabled;
+      buttonRef.current.style.opacity = '.5';
+      buttonRef.current.style.pointerEvents = 'none';
     }
+    fetch('https://formsubmit.co/ajax/harelpanker@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        name: person,
+        email: userEmail,
+        message: data.message,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setSuccess(true);
+        setPersonMessage(data.message);
+      })
+      .catch((error) => console.log(error));
   };
 
   useEffect(() => {
@@ -85,6 +88,7 @@ const Step3: FC<Step3Props> = ({}) => {
       </div>
 
       <button
+        ref={buttonRef}
         className='relative z-10 px-7 py-3 rounded text-slate-900 bg-slate-50 font-medium transition duration-300 hover:bg-slate-50/90'
         type='submit'>
         Submit
