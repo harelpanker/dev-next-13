@@ -1,4 +1,5 @@
 import Gradient from '@/components/ui/Gradient';
+import PageWrapper from '@/components/ui/PageWrapper';
 import Hero from '@/components/work/Hero';
 import List from '@/components/work/List';
 import { getWork } from '@/services';
@@ -28,10 +29,12 @@ export default async function Page() {
   return (
     <div className='flex flex-col pt-16 md:pt-36 relative'>
       <Gradient gradientType='type-2' />
-      <div className='flex flex-col gap-10 lg:gap-24'>
-        <Hero />
-        <List data={data} />
-      </div>
+      <PageWrapper>
+        <div className='flex flex-col gap-10 lg:gap-24'>
+          <Hero />
+          <List data={data} />
+        </div>
+      </PageWrapper>
     </div>
   );
 }

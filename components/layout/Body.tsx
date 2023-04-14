@@ -1,7 +1,6 @@
 'use client';
 
 import { FC, ReactNode } from 'react';
-
 import { useAtom } from 'jotai';
 import isOpen from '@/store/nav-store';
 
@@ -17,7 +16,7 @@ const Body: FC<BodyProps> = ({ children }) => {
       className={`antialiased text-slate-50 bg-black ${
         open ? 'h-screen overflow-hidden' : ''
       }`}>
-      {children}
+      <div>{children}</div>
     </body>
   );
 };
