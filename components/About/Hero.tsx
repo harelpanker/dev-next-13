@@ -13,9 +13,8 @@ const Hero: FC<HeroProps> = ({}) => {
           </h1>
           <div className='text-lg flex flex-col gap-2 w-full max-w-sm md:max-w-md'>
             <p>
-              My experience working as a freelance web developer over the past
-              few years has provided me with a broad spectrum of knowledge in
-              the field of web development.
+              My experience working as a freelance web developer has provided me
+              with a broad spectrum of knowledge in web development.
             </p>
             <p>
               In addition, I have gained expertise in a range of technologies,{' '}
