@@ -1,4 +1,6 @@
 import './globals.css';
+import { Metadata } from 'next';
+import GoogleTagManeger from '@/utils/GoogleTagManager';
 import localFont from 'next/font/local';
 import Navbar from '@/components/navbar/Navbar';
 import Body from '@/components/layout/Body';
@@ -8,7 +10,7 @@ type RootProps = {
   children: React.ReactNode;
 };
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Harel Panker | Frontend Developer',
   description: "Hi! My name is Harel and I'm a front end web developer",
   themeColor: 'black',
@@ -77,6 +79,9 @@ export default function RootLayout({ children }: RootProps) {
       lang='en'
       dir='ltr'
       className={`${general.variable} ${cabinetgrotesk.variable}`}>
+      <head>
+        <GoogleTagManeger />
+      </head>
       <Body>
         <div className='flex flex-col min-h-screen justify-between'>
           <Navbar />

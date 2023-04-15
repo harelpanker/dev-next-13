@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <div className='flex flex-col justify-center relative py-20'>
       <Gradient gradientType='type-1' />
-
       <Container>
         <Hero />
       </Container>
