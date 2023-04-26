@@ -1,6 +1,5 @@
 'use client';
 import { FC } from 'react';
-import { motion } from 'framer-motion';
 
 type GradientProps = {
   gradientType?: 'type-1' | 'type-2' | 'type-3' | 'type-4';
@@ -9,11 +8,7 @@ type GradientProps = {
 const Gradient: FC<GradientProps> = (props) => {
   const { gradientType = 'type-1' } = props;
   return (
-    <motion.div
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.2 }}
-      className='max-w-full absolute w-full h-[40vh] inset-0 top-0 left-0 overflow-hidden'>
+    <div className='max-w-full absolute w-full h-[40vh] inset-0 top-0 left-0 overflow-hidden'>
       {gradientType === 'type-1' ? (
         <div
           className='w-full h-[40vh] gradiant_header'
@@ -46,7 +41,7 @@ const Gradient: FC<GradientProps> = (props) => {
           }}
         />
       ) : null}
-    </motion.div>
+    </div>
   );
 };
 
