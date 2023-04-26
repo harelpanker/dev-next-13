@@ -11,6 +11,10 @@ module.exports = {
         serif: ['var(--font-cabinetgrotesk)', ...fontFamily.serif],
       },
     },
+    minHeight: {
+      dvh: '100dvh',
+      screen: '100vh',
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 };
