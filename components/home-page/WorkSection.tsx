@@ -3,28 +3,27 @@ import MainButton from '../ui/MainButton';
 import TypographyH2 from '../ui/TypographyH2';
 import { getWork } from '@/services';
 
-export const metadata = {
-  title: 'Some of my work',
-  description: 'My day to day work',
-  metadataBase: new URL('https://www.panker.dev/work'),
-  openGraph: {
-    title: 'Some of my work',
-    description: 'My day to day work',
-    url: 'https://www.panker.dev/work',
-  },
-  twitter: {
-    title: 'Some of my work',
-    description: 'My day to day work',
-  },
-};
-
 const getData = async () => {
-  const workList = (await getWork()) || [];
+  const list = (await getWork()) || [];
+
+  const workList = list.filter((item: { isHome: boolean }) => item.isHome);
+  // [
+  //   {
+  //     id: 'clh0wbbgz0ci00bjwcgzy80kl',
+  //     title: 'Yonivers',
+  //     description: 'Insurance | Simple, Rapide, Facile',
+  //     isHome: true,
+  //     link: 'https://app.yonivers.com/mrh/1',
+  //     tags: [ [Object], [Object] ]
+  //   }
+  // ]
+
   return workList;
 };
 
 export default async function WorkSection() {
   const data = await getData();
+
   return (
     <section className='flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
       <Container>

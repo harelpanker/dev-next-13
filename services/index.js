@@ -10,6 +10,7 @@ export const getWork = async () => {
         id
         title
         description
+        isHome
         link
         tags {
           id
