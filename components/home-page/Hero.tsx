@@ -7,7 +7,7 @@ type HeroProps = {};
 
 const Hero: FC<HeroProps> = ({}) => {
   return (
-    <header className='flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
+    <section className='flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
       <Container>
         <div className='flex flex-col xl:grid grid-cols-8 grid-rows-4'>
           <figure className='relative mb-8 xl:mb-0 col-span-4 row-span-3 col-start-2 row-start-2 grayscale hover:grayscale-0 transition duration-300'>
@@ -23,15 +23,15 @@ const Hero: FC<HeroProps> = ({}) => {
               I&apos;m Harel
             </span>
           </h1>
-          <div className='row-start-4 col-start-6 col-span-3 flex xl:p-6 max-w-lg items-end text-xl md:text-2xl font-medium'>
+          <div className='row-start-4 col-start-6 col-span-3 flex xl:p-6 max-w-xl items-end text-xl md:text-2xl font-medium'>
             <p>
-              Front-end engenir worked with leading agencies and startups to
-              develop products that help meet users&apos; needs.
+              Front-end engenir, working as a freelance with leading agencies
+              and startups to develop products that help meet users&apos; needs.
             </p>
           </div>
         </div>
       </Container>
-    </header>
+    </section>
   );
 };
 
