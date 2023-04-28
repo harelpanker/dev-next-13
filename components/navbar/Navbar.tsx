@@ -14,7 +14,7 @@ type NavbarProps = {};
 const Navbar: FC<NavbarProps> = ({}) => {
   const [open] = useAtom(isOpen);
   return (
-    <header className='min-h-[70px] w-full sticky top-0 flex items-center z-50 border-b border-slate-200/40 lg:px-12 px-5'>
+    <header className='min-h-[70px] w-full sticky top-0 flex items-center z-50 border-b border-slate-800/40 lg:px-12 px-5'>
       <Container>
         <nav className='flex items-center justify-between relative z-50'>
           <Logo />
@@ -30,7 +30,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
           backdropFilter: 'saturate(180%) blur(5px)',
           backfaceVisibility: 'hidden',
         }}
-        className='absolute z-10 inset-0 w-full h-full blur-sm bg-slate-900 bg-opacity-20'></div>
+        className='absolute z-10 inset-0 w-full h-full blur-sm bg-slate-50 bg-opacity-20'></div>
     </header>
   );
 };

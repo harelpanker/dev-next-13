@@ -31,11 +31,11 @@ const MobileButton: FC<MobileButtonProps> = ({}) => {
         type='button'
         className='flex flex-col w-6 h-6 lg:hidden justify-around'>
         <div
-          className={`w-full h-px bg-white transition ${
+          className={`w-full h-px transition bg-slate-900 ${
             open ? '-rotate-45 translate-y-[6px]' : 'rotate-0 translate-y-[2px]'
           }`}></div>
         <div
-          className={`w-full h-px bg-white transition ${
+          className={`w-full h-px transition bg-slate-900 ${
             open
               ? 'rotate-45 -translate-y-[6px]'
               : 'rotate-0 -translate-y-[2px]'
