@@ -1,45 +1,60 @@
+'use client';
 import { FC } from 'react';
 import Container from '@/components/ui/Container';
-import { ExternalLink } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { useViewportSize } from '@mantine/hooks';
 
 type ListProps = {
   data: {
     id: string;
     title: string;
     link: string;
+    description: string;
     tags: { id: string; tagName: string }[];
   }[];
 };
 
 const List: FC<ListProps> = ({ data }) => {
+  const { width } = useViewportSize();
+
   return (
     <section>
-      <Container>
-        <ul className='relative z-20 w-full flex flex-col'>
-          {data?.map((item) => (
-            <li
-              className='group relative text-lg font-light border-t border-slate-50/50 last:border-b overflow-hidden'
-              key={item.id}>
+      <Container size='md'>
+        <ul className='flex flex-col'>
+          {data.map((item) => (
+            <li key={item.id}>
               <a
-                className='relative flex flex-col gap-3 z-20 md:py-12 py-8 px-5 w-full md:grid md:grid-cols-3 group-hover:text-slate-900 transition duration-500'
+                className='group'
                 href={item.link}
                 target='_blank'
-                rel='nooppener'>
-                <h3 className='uppercase text-lg'>{item.title}</h3>
-                <ul className='flex gap-3'>
-                  {item.tags.map((i) => (
-                    <li
-                      className='py-1 px-3 rounded-full border group-hover:text-slate-900 border-slate-50/50 text-sm group-hover:border-slate-900/50 transition duration-500'
-                      key={i.id}>
-                      {i.tagName}
-                    </li>
-                  ))}
-                </ul>
-                <div className='md:static absolute inset-0 top-auto left-auto right-2 bottom-2 flex justify-end items-center'>
-                  <ExternalLink />
+                rel='noopener noreferrer'>
+                <div className='py-6 lg:py-20 flex flex-col gap-2 md:gap-5'>
+                  <div className='flex items-center relative'>
+                    <ArrowRight
+                      size={width < 768 ? 30 : 50}
+                      className='xl:absolute xl:top-1/2 xl:-translate-y-1/2 xl:left-0 xl:inset-0 xl:opacity-0 transition duration-300 group-hover:opacity-100'
+                    />
+                    <div className='flex gap-5 items-end transition duration-300 group-hover:translate-x-16'>
+                      <h2 className='text-4xl md:text-7xl font-medium'>
+                        {item.title}
+                      </h2>
+                      <ul className='grid grid-flow-col text-xs lg:text-base divide-x'>
+                        {item.tags.map((i) => (
+                          <li
+                            className='first:pl-0 first:ml-0 pl-2 ml-2'
+                            key={i.id}>
+                            {i.tagName}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <p className='text-lg lg:text-2xl pl-8 md:pl-14 xl:pl-0'>
+                    {item.description}
+                  </p>
                 </div>
               </a>
-              <div className='absolute hidden lg:block z-10 bg-slate-50 w-full inset-0 h-[300%] transition-all duration-700 translate-y-1/3 group-hover:-translate-y-1/3'></div>
             </li>
           ))}
         </ul>
