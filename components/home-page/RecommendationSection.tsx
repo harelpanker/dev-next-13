@@ -17,7 +17,9 @@ export default async function RecommendationSection() {
     <section className='flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
       <Container>
         <div className='container max-w-7xl mx-auto flex flex-col gap-6'>
-          <blockquote className='text-3xl lg:text-5xl font-medium italic leading-relaxed'>
+          <blockquote
+            className='text-3xl lg:text-5xl font-medium italic'
+            style={{ lineHeight: 1.65 }}>
             {data[0].quote}
           </blockquote>
           <a
