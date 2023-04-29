@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Container from '../ui/Container';
 import { getRecommendations } from '@/services';
 
@@ -11,20 +12,36 @@ const getData = async () => {
 
 export default async function RecommendationSection() {
   const data = await getData();
-  //   {
-  //     id: 'clg97o2ec1k0f0bl9uvboie4f',
-  //     name: 'Elizabeth Cohen',
-  //     position: 'Marketing Coordinator at Antidote',
-  //     linkedin: 'https://www.linkedin.com/in/amandaelizabethcrum/',
-  //     quote:
-  //       'I have worked with Harel as a freelance developer at Antidote Health. He processes a great deal of knowledge and experience in the field of development, and always does extensive research when investigating if something can be done. Harel has great communication skills and professionalism and is always quick and efficient when completing projects. He has been a great pleasure to work with and I highly recommend him to any company looking to partner with him in development.',
-  //     profileImage: { url: 'https://media.graphassets.com/KlZ4YmBSR6KVLO8kia9x', width: 200, height: 200 }
-  //   }
 
   return (
     <section className='flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
       <Container>
-        <blockquote>{data[0].name}</blockquote>
+        <div className='container max-w-7xl mx-auto flex flex-col gap-6'>
+          <blockquote className='text-3xl lg:text-5xl font-medium italic leading-relaxed'>
+            {data[0].quote}
+          </blockquote>
+          <a
+            href={data[0].linkedin}
+            target='_blank'
+            rel='noopener'
+            className='flex items-center gap-5'>
+            <Image
+              className='rounded-full p-1 border border-slate-900/50 w-24 h-24 lg:w-auto lg:h-auto'
+              src={data[0].profileImage.url}
+              alt={data[0].name}
+              width={180}
+              height={180}
+            />
+            <div>
+              <h2 className='font-semibold text-2xl lg:text-3xl'>
+                {data[0].name}
+              </h2>
+              <p className='text-slate-900/90 text-lg lg:text-2xl'>
+                {data[0].position}
+              </p>
+            </div>
+          </a>
+        </div>
       </Container>
     </section>
   );
