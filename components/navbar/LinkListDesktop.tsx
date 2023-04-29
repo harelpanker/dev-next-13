@@ -5,7 +5,7 @@ type LinkListDesktopProps = {};
 
 const LinkListDesktop: FC<LinkListDesktopProps> = ({}) => {
   return (
-    <ul className='flex lg:gap-2 font-medium flex-col lg:flex-row gap-6 text-2xl lg:text-base'>
+    <ul className='flex lg:gap-2 font-medium flex-col lg:flex-row gap-8 text-3xl lg:text-base'>
       <li>
         <Link
           href='/work'

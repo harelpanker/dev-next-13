@@ -17,7 +17,7 @@ export default async function WorkSection() {
 
   return (
     <section className='flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
-      <Container>
+      <Container size='md'>
         <div className='flex flex-col items-start gap-10 md:gap-20'>
           <TypographyH2 text='Selected work' />
           <WorkList data={data} />
