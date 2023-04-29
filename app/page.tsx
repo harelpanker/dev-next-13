@@ -1,4 +1,5 @@
 import Hero from '@/components/home-page/Hero';
+import RecommendationSection from '@/components/home-page/RecommendationSection';
 import WorkSection from '@/components/home-page/WorkSection';
 
 export default function Home() {
@@ -8,6 +9,8 @@ export default function Home() {
       {/* https://beta.nextjs.org/docs/configuring/typescript#async-server-component-typescript-error */}
       {/* @ts-expect-error Async Server Component */}
       <WorkSection />
+      {/* @ts-expect-error Async Server Component */}
+      <RecommendationSection />
     </div>
   );
 }
