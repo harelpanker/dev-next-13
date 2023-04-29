@@ -24,7 +24,6 @@ export default async function Page() {
       <Hero />
       <Images />
       <SkillsSection />
-
       <CvButton />
     </div>
   );
