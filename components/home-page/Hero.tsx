@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import hero_image from '../../public/images/2.jpeg';
 import Container from '../ui/Container';
+import Link from 'next/link';
 
 type HeroProps = {};
 
@@ -23,11 +24,19 @@ const Hero: FC<HeroProps> = ({}) => {
               I&apos;m Harel
             </span>
           </h1>
-          <div className='row-start-4 col-start-6 col-span-3 flex xl:p-6 max-w-xl items-end text-xl md:text-2xl font-medium'>
+          <div className='row-start-4 col-start-6 col-span-3 flex flex-col xl:p-6 max-w-xl justify-end items-start gap-3 text-xl md:text-2xl font-medium'>
             <p>
               Front-end engenir, working as a freelance with leading agencies
               and startups to develop products that help meet users&apos; needs.
             </p>
+            <Link
+              className='flex flex-col gap-[2px] group text-lg'
+              href='/about'>
+              <span className='relative z-20'>My full set of skills</span>
+              <div className='bg-slate-200 w-full h-[3px] relative overflow-hidden'>
+                <div className='absolute h-full w-full bg-slate-900 transition duration-300 -translate-x-full group-hover:translate-x-0'></div>
+              </div>
+            </Link>
           </div>
         </div>
       </Container>

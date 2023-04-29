@@ -1,6 +1,7 @@
 import Hero from '@/components/home-page/Hero';
 import RecommendationSection from '@/components/home-page/RecommendationSection';
 import WorkSection from '@/components/home-page/WorkSection';
+import CvButton from '@/components/layout/CvButton';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <WorkSection />
       {/* @ts-expect-error Async Server Component */}
       <RecommendationSection />
+      <CvButton />
     </div>
   );
 }

@@ -7,7 +7,9 @@ import WorkList from './WorkList';
 const getData = async () => {
   const list = (await getWork()) || [];
 
-  const workList = list.filter((item: { isHome: boolean }) => item.isHome);
+  const workList = list
+    .filter((item: { isHome: boolean }) => item.isHome)
+    .slice(0, 4);
 
   return workList;
 };
