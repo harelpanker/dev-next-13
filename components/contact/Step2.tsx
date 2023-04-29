@@ -57,18 +57,22 @@ const Step2: FC<Step2Props> = ({}) => {
           name='email'
           type='text'
           id='email'
-          className='block w-full p-4 text-slate-900 border border-slate-300 rounded-lg bg-slate-50 sm:text-md focus:ring-purple-500 focus:border-purple-500'
+          className='block w-full p-4 text-slate-900 text-3xl lg:text-6xl font-medium border-b-4 border-slate-300 rounded-lg bg-slate-50 sm:text-md focus:ring-purple-500 focus:border-purple-500'
         />
         {errors.email ? (
-          <p className='text-red-500 mt-2'>{errors.email.message}</p>
+          <p className='text-red-500 mt-2 text-lg font-medium'>
+            {errors.email.message}
+          </p>
         ) : null}
       </div>
 
-      <button
-        className='relative z-10 px-7 py-3 rounded text-slate-900 bg-slate-50 font-medium transition duration-300 hover:bg-slate-50/90'
-        type='submit'>
-        Next
-      </button>
+      <div className='flex w-full justify-start'>
+        <button
+          className='text-4xl lg:text-6xl font-medium border-b-4 border-slate-500 hover:border-slate-900 transition duration-500'
+          type='submit'>
+          Next
+        </button>
+      </div>
     </form>
   );
 };

@@ -80,19 +80,23 @@ const Step3: FC<Step3Props> = ({}) => {
           {...register('message')}
           name='message'
           id='message'
-          className='block min-h-[124px] w-full p-4 text-slate-900 border border-slate-300 rounded-lg bg-slate-50 sm:text-md focus:ring-purple-500 focus:border-purple-500'
+          className='block min-h-[270px] w-full p-4 text-slate-900 text-3xl lg:text-6xl font-medium border-b-4 border-slate-300 rounded-lg bg-slate-50 sm:text-md focus:ring-purple-500 focus:border-purple-500'
         />
         {errors.message ? (
-          <p className='text-red-500 mt-2'>{errors.message.message}</p>
+          <p className='text-red-500 mt-2 text-lg font-medium'>
+            {errors.message.message}
+          </p>
         ) : null}
       </div>
 
-      <button
-        ref={buttonRef}
-        className='relative z-10 px-7 py-3 rounded text-slate-900 bg-slate-50 font-medium transition duration-300 hover:bg-slate-50/90'
-        type='submit'>
-        Submit
-      </button>
+      <div className='flex w-full justify-start'>
+        <button
+          ref={buttonRef}
+          className='text-4xl lg:text-6xl font-medium border-b-4 border-slate-500 hover:border-slate-900 transition duration-500'
+          type='submit'>
+          Submit
+        </button>
+      </div>
     </form>
   );
 };
