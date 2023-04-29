@@ -12,7 +12,7 @@ const Footer: FC<FooterProps> = ({}) => {
   const pathname = usePathname();
 
   return (
-    <footer className='pb-10 pt-[10vh] lg:pt-[15vh] flex flex-col gap-6'>
+    <footer className='pb-10 pt-[10vh] lg:pt-[15vh] flex flex-col gap-6 relative z-20 bg-slate-50'>
       <div className='w-full uppercase font-medium flex justify-center items-center gap-4'>
         <a
           target='_blank'

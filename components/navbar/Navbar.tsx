@@ -14,7 +14,7 @@ type NavbarProps = {};
 const Navbar: FC<NavbarProps> = ({}) => {
   const [open] = useAtom(isOpen);
   return (
-    <header className='min-h-[70px] w-full sticky top-0 flex items-center z-50 border-b border-slate-800/40 lg:px-12'>
+    <header className='min-h-[70px] w-full sticky top-0 flex items-center z-20 border-b border-slate-800/40 lg:px-12'>
       <Container>
         <nav className='flex items-center justify-between relative z-50'>
           <Logo />
