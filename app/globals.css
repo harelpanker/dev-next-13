@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/*
 :root {
   --geist-background-dark: #000;
   --geist-background-light: #f8fafc;
@@ -19,3 +19,4 @@
   background-position: bottom;
   background-repeat: no-repeat;
 }
+*/

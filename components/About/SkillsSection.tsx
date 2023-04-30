@@ -7,8 +7,10 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
   return (
     <section>
       <Container size='md'>
-        <div className='flex flex-col gap-20'>
-          <h2 className='font-semibold text-3xl'>I know a thing or two on:</h2>
+        <div className='flex flex-col gap-16 lg:gap-20'>
+          <h2 className='font-semibold text-2xl'>
+            I know a thing or two about:
+          </h2>
           <ul className='flex flex-col gap-10 lg:gap-24'>
             {/* 1 */}
             <li className='flex flex-col lg:flex-row gap-2 lg:justify-between'>
@@ -20,7 +22,7 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
               </h3>
               <div className='flex flex-col gap-2 max-w-xl leading-relaxed md:leading-relaxed md:font-medium text-lg md:text-2xl'>
                 <p>
-                  Strongly emphasize the basics of web development, from
+                  Strongly emphasize the basics of web development, from{' '}
                   <strong className='font-medium md:font-semibold'>
                     semantic HTML, CSS (SCSS), and JavaScript / TypeScript
                   </strong>
