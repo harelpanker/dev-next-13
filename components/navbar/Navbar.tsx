@@ -26,11 +26,11 @@ const Navbar: FC<NavbarProps> = ({}) => {
         {open ? <MobileMenu /> : null}
       </Container>
       <div
-        style={{
-          backdropFilter: 'saturate(180%) blur(5px)',
-          backfaceVisibility: 'hidden',
-        }}
-        className='absolute z-10 inset-0 w-full h-full blur-sm bg-slate-50 bg-opacity-20'></div>
+        // style={{
+        //   backdropFilter: 'saturate(180%) blur(5px)',
+        //   backfaceVisibility: 'hidden',
+        // }}
+        className='absolute z-10 inset-0 w-full h-full blur-sm bg-slate-50 bg-opacity-20 backdrop-blur'></div>
     </header>
   );
 };

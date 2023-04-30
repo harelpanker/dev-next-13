@@ -21,8 +21,10 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
               <div className='flex flex-col gap-2 max-w-xl leading-relaxed md:leading-relaxed md:font-medium text-lg md:text-2xl'>
                 <p>
                   Strongly emphasize the basics of web development, from
-                  semantic HTML, CSS (SCSS), and JavaScript / TypeScript, these
-                  are the things I&apos;m using on a daily basis.
+                  <strong className='font-medium md:font-semibold'>
+                    semantic HTML, CSS (SCSS), and JavaScript / TypeScript
+                  </strong>
+                  , these are the things I&apos;m using on a daily basis.
                 </p>
               </div>
             </li>
@@ -34,11 +36,18 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
                   (02)
                 </sup>
               </h3>
-              <div className='flex flex-col gap-2 max-w-xl leading-relaxed md:leading-relaxed md:font-medium text-lg md:text-2xl'>
+              <div className='flex flex-col gap-2 lg:gap-4 max-w-xl leading-relaxed md:leading-relaxed md:font-medium text-lg md:text-2xl'>
                 <p>
-                  Working constantly with React/Next.js (more of Next), know how
-                  to work with Styled-Components and MUI, but my styling
-                  solution of choice is TailwindCSS.
+                  Working constantly with{' '}
+                  <strong className='font-medium md:font-semibold'>
+                    React/Next.js
+                  </strong>{' '}
+                  (more of Next), know how to work with Styled-Components and
+                  MUI, but my styling solution of choice is{' '}
+                  <strong className='font-medium md:font-semibold'>
+                    TailwindCSS
+                  </strong>
+                  .
                 </p>
                 <p>Always glad to learn new things!</p>
               </div>
@@ -53,8 +62,12 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
               </h3>
               <div className='flex flex-col gap-2 max-w-xl leading-relaxed md:leading-relaxed md:font-medium text-lg md:text-2xl'>
                 <p>
-                  Very comfortable working with Figma and Webflow - that is how
-                  I started and how I build many of my clients&apos; websites.
+                  Very comfortable working with{' '}
+                  <strong className='font-medium md:font-semibold'>
+                    Figma and Webflow
+                  </strong>{' '}
+                  - that is how I started, and how I build many of my
+                  clients&apos; websites.
                 </p>
               </div>
             </li>
@@ -66,14 +79,20 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
                   (04)
                 </sup>
               </h3>
-              <div className='flex flex-col gap-2 max-w-xl leading-relaxed md:leading-relaxed md:font-medium text-lg md:text-2xl'>
+              <div className='flex flex-col gap-2 lg:gap-4 max-w-xl leading-relaxed md:leading-relaxed md:font-medium text-lg md:text-2xl'>
                 <p>
-                  I built my site to perform well - considering page speed, SEO
-                  optimization, and accessibility.
+                  I built my site to perform well - considering{' '}
+                  <strong className='font-medium md:font-semibold'>
+                    page speed, SEO optimization, and accessibility
+                  </strong>
+                  .
                 </p>
                 <p>
-                  Strong understanding of the main principles of UI, from
-                  typography, hierarchy, whitespace, colors, and more.
+                  Strong understanding of the{' '}
+                  <strong className='font-medium md:font-semibold'>
+                    main principles of UI
+                  </strong>
+                  , from typography, hierarchy, whitespace, colors, and more.
                 </p>
               </div>
             </li>
