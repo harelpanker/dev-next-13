@@ -15,8 +15,8 @@ const Hero: FC<HeroProps> = ({}) => {
             style={{ lineHeight: 1.625 }}
             className='text-2xl md:text-6xl font-medium flex flex-col gap-3 md:gap-8'>
             <p>
-              Over the course of recent years, I have collaborated with numerous
-              clients on a{' '}
+              In the past few years, I have collaborated with numerous clients
+              on a{' '}
               <strong className='font-semibold'>
                 diverse range of projects.
               </strong>

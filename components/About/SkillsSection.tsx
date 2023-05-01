@@ -26,7 +26,7 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
                   <strong className='font-medium md:font-semibold'>
                     semantic HTML, CSS (SCSS), and JavaScript / TypeScript
                   </strong>
-                  , these are the things I&apos;m using on a daily basis.
+                  , these are the things I use on a daily basis.
                 </p>
               </div>
             </li>
@@ -83,18 +83,19 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
               </h3>
               <div className='flex flex-col gap-2 lg:gap-4 max-w-xl leading-relaxed md:leading-relaxed md:font-medium text-lg md:text-2xl'>
                 <p>
-                  I built my site to perform well - considering{' '}
+                  My websites are well performing - In the process of developing
+                  a site I consider:{' '}
                   <strong className='font-medium md:font-semibold'>
-                    page speed, SEO optimization, and accessibility
+                    page speed, SEO optimization, and accessibility.
                   </strong>
-                  .
                 </p>
                 <p>
-                  Strong understanding of the{' '}
+                  Strong understanding of the main{' '}
                   <strong className='font-medium md:font-semibold'>
-                    main principles of UI
+                    principles of UI
                   </strong>
-                  , from typography, hierarchy, whitespace, colors, and more.
+                  , from typography and hierarchy, to whitespace and colors, and
+                  more.
                 </p>
               </div>
             </li>
