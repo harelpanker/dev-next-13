@@ -15,9 +15,8 @@ const Form: FC<FormProps> = ({}) => {
   const [isSuccess] = useAtom(success);
 
   return (
-    <section className='relative z-10 text-slate-900 py-10 px-5'>
+    <section className='relative z-10 text-slate-900 py-10 lg:px-5'>
       <Container size='md'>
-        {' '}
         <div className='max-w-3xl'>
           {!isSuccess ? (
             <>
