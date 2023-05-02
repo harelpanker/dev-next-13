@@ -35,7 +35,7 @@ const List: FC<ListProps> = ({ data }) => {
                       className='xl:absolute xl:top-1/2 xl:-translate-y-1/2 xl:left-0 xl:inset-0 xl:opacity-0 transition duration-300 group-hover:opacity-100'
                     />
                     <div className='flex gap-5 items-end transition duration-300 group-hover:translate-x-16'>
-                      <h2 className='text-4xl md:text-7xl font-medium'>
+                      <h2 className='text-3xl md:text-7xl font-medium'>
                         {item.title}
                       </h2>
                       <ul className='grid grid-flow-col text-xs lg:text-base divide-x'>

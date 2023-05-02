@@ -13,23 +13,29 @@ const Footer: FC<FooterProps> = ({}) => {
 
   return (
     <footer className='pb-10 pt-[10vh] lg:pt-[15vh] flex flex-col gap-6 relative z-20 bg-slate-50'>
-      <div className='w-full uppercase font-medium flex justify-center items-center gap-4'>
-        <a
-          target='_blank'
-          rel='noopener'
-          href='https://www.linkedin.com/in/panker-harel/'>
-          Linkedin
-        </a>
-        <a target='_blank' rel='noopener' href='https://github.com/harelpanker'>
-          GitHub
-        </a>
-        <a
-          target='_blank'
-          rel='noopener'
-          href='mailto:harelpanker@protonmail.com'>
-          Email
-        </a>
-      </div>
+      <ul className='flex flex-row gap-4 justify-center items-center font-medium text-base'>
+        <li>
+          <Link
+            href='/work'
+            className='px-3 py-2 transition-all duration-500 opacity-80 hover:opacity-100'>
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link
+            href='/recommendations'
+            className='px-3 py-2 transition-all duration-500 opacity-80 hover:opacity-100'>
+            Recommendations
+          </Link>
+        </li>
+        <li>
+          <Link
+            href='/about'
+            className='px-3 py-2 transition-all duration-500 opacity-80 hover:opacity-100'>
+            About
+          </Link>
+        </li>
+      </ul>
 
       {pathname !== '/contact' ? (
         <>
@@ -53,6 +59,23 @@ const Footer: FC<FooterProps> = ({}) => {
           </div>
         </>
       ) : null}
+      <div className='w-full uppercase font-medium flex justify-center items-center gap-8'>
+        <a
+          target='_blank'
+          rel='noopener'
+          href='https://www.linkedin.com/in/panker-harel/'>
+          Linkedin
+        </a>
+        <a target='_blank' rel='noopener' href='https://github.com/harelpanker'>
+          GitHub
+        </a>
+        <a
+          target='_blank'
+          rel='noopener'
+          href='mailto:harelpanker@protonmail.com'>
+          Email
+        </a>
+      </div>
     </footer>
   );
 };
