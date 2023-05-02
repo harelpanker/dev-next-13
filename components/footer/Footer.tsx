@@ -12,7 +12,7 @@ const Footer: FC<FooterProps> = ({}) => {
   const pathname = usePathname();
 
   return (
-    <footer className='pb-10 pt-[10vh] lg:pt-[15vh] flex flex-col gap-6'>
+    <footer className='pb-10 pt-[10vh] lg:pt-[15vh] flex flex-col gap-6 relative z-20 bg-slate-50'>
       <div className='w-full uppercase font-medium flex justify-center items-center gap-4'>
         <a
           target='_blank'
@@ -35,7 +35,7 @@ const Footer: FC<FooterProps> = ({}) => {
         <>
           <Marquee
             gradient={false}
-            className='w-full py-4 text-2xl md:text-4xl border-t-2 border-b-2 border-white uppercase font-medium flex gap-3'>
+            className='w-full py-4 text-2xl md:text-4xl border-t-2 border-b-2 border-slate-900/50 uppercase font-medium flex gap-3'>
             Let&lsquo;s work together — Get in touch — Let&lsquo;s work together
             — Get in touch — Let&lsquo;s work together — Get in touch —
             Let&lsquo;s work together — Get in touch
@@ -46,9 +46,9 @@ const Footer: FC<FooterProps> = ({}) => {
               className='uppercase flex gap-1 items-center relative group overflow-hidden'
               href='/contact'>
               Drop me a line{' '}
-              <ArrowRight className='font-light text-white/80 -rotate-45 transition group-hover:rotate-0 w-4' />
-              <div className='absolute w-full inset-0 top-auto h-px bg-white transition group-hover:-translate-x-full'></div>
-              <div className='absolute w-full inset-0 top-auto h-px bg-slate-50/70 translate-x-full transition group-hover:translate-x-0'></div>
+              <ArrowRight className='font-light text-slate-900/80 -rotate-45 transition group-hover:rotate-0 w-4' />
+              <div className='absolute w-full inset-0 top-auto h-px bg-slate-900 transition group-hover:-translate-x-full'></div>
+              <div className='absolute w-full inset-0 top-auto h-px bg-slate-900/70 translate-x-full transition group-hover:translate-x-0'></div>
             </Link>
           </div>
         </>

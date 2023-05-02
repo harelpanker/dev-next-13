@@ -5,16 +5,22 @@ type HeroProps = {};
 
 const Hero: FC<HeroProps> = ({}) => {
   return (
-    <header>
-      <Container>
-        <div className='flex flex-col md:flex-row gap-3 justify-between'>
-          <h1 className='font-serif text-6xl md:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-slate-50 via-slate-100 to-slate-400'>
+    <section>
+      <Container size='md'>
+        <div className='flex flex-col gap-8 lg:gap-56 justify-between'>
+          <h1 className='text-7xl md:text-9xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700'>
             About
           </h1>
-          <div className='text-lg flex flex-col gap-2 w-full max-w-sm md:max-w-md'>
+          <div
+            style={{ lineHeight: 1.625 }}
+            className='text-2xl md:text-6xl font-medium flex flex-col gap-3 md:gap-8'>
             <p>
               My experience working as a freelance web developer has provided me
-              with a broad spectrum of knowledge in web development.
+              with a{' '}
+              <strong className='font-semibold'>
+                broad spectrum of knowledge
+              </strong>{' '}
+              in web development.
             </p>
             <p>
               In addition, I have gained expertise in a range of technologies,{' '}
@@ -27,7 +33,7 @@ const Hero: FC<HeroProps> = ({}) => {
           </div>
         </div>
       </Container>
-    </header>
+    </section>
   );
 };
 

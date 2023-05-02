@@ -13,7 +13,7 @@ const Body: FC<BodyProps> = ({ children }) => {
 
   return (
     <body
-      className={`antialiased text-slate-50 bg-black ${
+      className={`antialiased text-slate-900 bg-slate-50 ${
         open ? 'h-screen overflow-hidden' : ''
       }`}>
       <div>{children}</div>

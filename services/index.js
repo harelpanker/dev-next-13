@@ -9,6 +9,8 @@ export const getWork = async () => {
       works {
         id
         title
+        description
+        isHome
         link
         tags {
           id

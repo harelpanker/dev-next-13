@@ -85,7 +85,7 @@ export default function RootLayout({ children }: RootProps) {
       <Body>
         <div className='flex flex-col min-h-dvh justify-between'>
           <Navbar />
-          <main className='grow'>{children}</main>
+          <main className='grow relative z-10'>{children}</main>
           <Footer />
         </div>
       </Body>

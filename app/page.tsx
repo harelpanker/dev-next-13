@@ -1,14 +1,18 @@
 import Hero from '@/components/home-page/Hero';
-import Container from '@/components/ui/Container';
-import Gradient from '@/components/ui/Gradient';
+import RecommendationSection from '@/components/home-page/RecommendationSection';
+import WorkSection from '@/components/home-page/WorkSection';
+import CvButton from '@/components/layout/CvButton';
 
 export default function Home() {
   return (
-    <div className='flex flex-col justify-center relative py-20'>
-      <Gradient gradientType='type-1' />
-      <Container>
-        <Hero />
-      </Container>
+    <div className='flex flex-col justify-center relative gap-32 lg:gap-0 py-12 lg:py-20'>
+      <Hero />
+      {/* https://beta.nextjs.org/docs/configuring/typescript#async-server-component-typescript-error */}
+      {/* @ts-expect-error Async Server Component */}
+      <WorkSection />
+      {/* @ts-expect-error Async Server Component */}
+      <RecommendationSection />
+      <CvButton />
     </div>
   );
 }
