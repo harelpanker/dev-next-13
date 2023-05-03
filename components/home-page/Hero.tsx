@@ -18,6 +18,7 @@ const Hero: FC<HeroProps> = ({}) => {
               priority
               src={hero_image}
               alt='Harel Panker - Fron end developer'
+              className='w-full h-full'
             />
           </figure>
           <h1 className='static xl:absolute mix-blend-multiply z-10 text-7xl font-serif md:text-9xl xl:text-[16rem] 2xl:text-[22rem] font-bold'>
