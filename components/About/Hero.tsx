@@ -5,7 +5,7 @@ type HeroProps = {};
 
 const Hero: FC<HeroProps> = ({}) => {
   return (
-    <section>
+    <section className='px-5 lg:px-14'>
       <Container size='md'>
         <div className='flex flex-col gap-8 lg:gap-56 justify-between'>
           <h1 className='text-7xl md:text-9xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700'>

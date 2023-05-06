@@ -5,7 +5,7 @@ type SkillsSectionProps = {};
 
 const SkillsSection: FC<SkillsSectionProps> = ({}) => {
   return (
-    <section>
+    <section className='px-5 lg:px-14'>
       <Container size='md'>
         <div className='flex flex-col gap-16 lg:gap-20'>
           <h2 className='font-semibold text-2xl'>
@@ -13,8 +13,8 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
           </h2>
           <ul className='flex flex-col gap-10 lg:gap-24'>
             {/* 1 */}
-            <li className='flex flex-col lg:flex-row gap-2 lg:justify-between'>
-              <h3 className='font-medium text-5xl md:text-7xl xl:text-8xl'>
+            <li className='flex flex-col xl:flex-row gap-2 lg:gap-12 lg:justify-between'>
+              <h3 className='font-medium text-5xl md:text-7xl 2xl:text-8xl'>
                 The basics
                 <sup className='text-lg relative -top-6 lg:-top-12 lg:text-2xl'>
                   (01)
@@ -31,8 +31,8 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
               </div>
             </li>
             {/* 2 */}
-            <li className='flex flex-col lg:flex-row gap-2 lg:justify-between'>
-              <h3 className='font-medium text-5xl md:text-7xl xl:text-8xl'>
+            <li className='flex flex-col xl:flex-row gap-2 lg:gap-12 lg:justify-between'>
+              <h3 className='font-medium text-5xl md:text-7xl 2xl:text-8xl'>
                 Frameworks
                 <sup className='text-lg relative -top-6 lg:-top-12 lg:text-2xl'>
                   (02)
@@ -55,8 +55,8 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
               </div>
             </li>
             {/* 3 */}
-            <li className='flex flex-col lg:flex-row gap-2 lg:justify-between'>
-              <h3 className='font-medium text-5xl md:text-7xl xl:text-8xl'>
+            <li className='flex flex-col xl:flex-row gap-2 lg:gap-12 lg:justify-between'>
+              <h3 className='font-medium text-5xl md:text-7xl 2xl:text-8xl'>
                 Tools
                 <sup className='text-lg relative -top-6 lg:-top-12 lg:text-2xl'>
                   (03)
@@ -74,8 +74,8 @@ const SkillsSection: FC<SkillsSectionProps> = ({}) => {
               </div>
             </li>
             {/* 4 */}
-            <li className='flex flex-col lg:flex-row gap-2 lg:justify-between'>
-              <h3 className='font-medium text-5xl md:text-7xl xl:text-8xl'>
+            <li className='flex flex-col xl:flex-row gap-2 lg:gap-12 lg:justify-between'>
+              <h3 className='font-medium text-5xl md:text-7xl 2xl:text-8xl'>
                 Soft Skills
                 <sup className='text-lg relative -top-6 lg:-top-12 lg:text-2xl'>
                   (04)
