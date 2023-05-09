@@ -48,8 +48,8 @@ const Step2: FC<Step2Props> = ({}) => {
       <div className='mb-6'>
         <label
           htmlFor='email'
-          className='block mb-2 text-sm font-medium text-slate-50'>
-          Your name
+          className='block mb-2 text-sm font-medium text-slate-900'>
+          Your Enail
         </label>
         <input
           placeholder='Email'

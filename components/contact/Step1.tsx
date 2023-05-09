@@ -42,7 +42,7 @@ const Step1: FC<Step1Props> = ({}) => {
       <div className='mb-6'>
         <label
           htmlFor='name'
-          className='block mb-2 text-sm font-medium text-slate-50'>
+          className='block mb-2 text-sm font-medium text-slate-900'>
           Your name
         </label>
         <input

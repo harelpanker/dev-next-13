@@ -72,7 +72,7 @@ const Step3: FC<Step3Props> = ({}) => {
       <div className='mb-6'>
         <label
           htmlFor='email'
-          className='block mb-2 text-sm font-medium text-slate-50'>
+          className='block mb-2 text-sm font-medium text-slate-900'>
           How can I help you
         </label>
         <textarea
