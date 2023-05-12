@@ -15,7 +15,7 @@ const CvButton: FC<CvButtonProps> = ({}) => {
           ? 'opacity-100 scale-100 -translate-y-6'
           : 'opacity-0 scale-75 translate-y-0'
       } transition duration-500 fixed z-50 whitespace-pre top-auto left-auto bottom-5 right-5 xl:right-[5vw] font-medium flex gap-2 items-center rounded-full px-4 py-1 bg-purple-300 text-purple-700 hover:bg-purple-700 hover:text-slate-50`}
-      href='https://drive.google.com/file/d/1dSW7_vzE0j3RZ0C3XZ9cAO45NhU8HVuL/view?usp=share_link'
+      href='https://drive.google.com/file/d/13e8XgZMBy9A6mY33-T8kHQf-9tdQsrPN/view?usp=share_link'
       target='_blank'
       download='Harel Panker CV - 2021'
       rel='noopener noreferrer'>
