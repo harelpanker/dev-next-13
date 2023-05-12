@@ -1,4 +1,5 @@
 'use client';
+
 import { FC } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useViewportSize } from '@mantine/hooks';
