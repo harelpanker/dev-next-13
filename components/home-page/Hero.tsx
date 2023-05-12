@@ -5,7 +5,7 @@ import Image from 'next/image';
 import hero_image from '../../public/images/2.jpeg';
 import Container from '../ui/Container';
 import Link from 'next/link';
-import { animate, inView, timeline } from 'motion';
+import { animate, inView, timeline, scroll } from 'motion';
 
 type HeroProps = {};
 
@@ -26,16 +26,38 @@ const Hero: FC<HeroProps> = ({}) => {
     ]);
 
     inView('.bottom_content', (info) => {
-      animate(
+      const controls = animate(
         info.target,
         { opacity: [0, 1], y: ['20%', '0%'] },
         { delay: 0.5, duration: 0.9 }
       );
+      return (leaveInfo) => controls.stop();
     });
+
+    scroll(
+      animate('.scroll_2', {
+        x: ['0%', '-200%'],
+        opacity: [1, 0],
+        offset: ['start end', 'end end'],
+      })
+    );
+    scroll(
+      animate('.scroll_1', {
+        x: ['0%', '200%'],
+        opacity: [1, 0],
+        offset: ['start end', 'end end'],
+      })
+    );
+    scroll(
+      animate('figure > img', {
+        y: ['0%', '-50%'],
+        offset: ['start end', 'end end'],
+      })
+    );
   }, []);
 
   return (
-    <section className='flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
+    <section className='flex flex-col gap-6 items-center lg:py-28 lg:px-12 overflow-hidden'>
       <Container>
         <div className='flex flex-col xl:grid grid-cols-8 grid-rows-4'>
           <figure className='relative mb-8 xl:mb-0 col-span-4 row-span-3 col-start-2 row-start-2 grayscale hover:grayscale-0 transition duration-300'>
