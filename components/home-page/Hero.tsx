@@ -49,12 +49,6 @@ const Hero: FC<HeroProps> = ({}) => {
         offset: ['start end', 'end end'],
       })
     );
-    scroll(
-      animate('figure', {
-        y: ['0%', '50%'],
-        offset: ['start end', 'end end', 'start start', 'end start'],
-      })
-    );
   }, []);
 
   return (
