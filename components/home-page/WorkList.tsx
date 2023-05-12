@@ -1,8 +1,9 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useViewportSize } from '@mantine/hooks';
+import { animate, inView, stagger } from 'motion';
 
 type WorkListProps = {
   data: {
@@ -18,16 +19,31 @@ type WorkListProps = {
 const WorkList: FC<WorkListProps> = ({ data }) => {
   const { width } = useViewportSize();
 
+  useEffect(() => {
+    inView('.li_inner', (info) => {
+      const controls = animate(
+        info.target,
+        { opacity: [0, 1], y: ['20%', '0%'] },
+        {
+          delay: stagger(0.5, { easing: 'ease-out' }),
+          duration: 1,
+          easing: [0.17, 0.55, 0.75, 1],
+        }
+      );
+      return (leaveInfo) => controls.stop();
+    });
+  }, []);
+
   return (
     <ul className='flex flex-col'>
       {data.map((item) => (
         <li key={item.id}>
           <a
-            className='group'
+            className='group py-6 lg:py-20 flex flex-col gap-2 md:gap-5'
             href={item.link}
             target='_blank'
             rel='noopener noreferrer'>
-            <div className='py-6 lg:py-20 flex flex-col gap-2 md:gap-5'>
+            <div className='li_inner'>
               <div className='flex items-center relative'>
                 <ArrowRight
                   size={width < 768 ? 30 : 50}
