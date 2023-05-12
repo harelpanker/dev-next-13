@@ -15,7 +15,7 @@ const MainButton: FC<MainButtonProps> = (props) => {
     inView('.main_button', (info) => {
       const controls = animate(
         info.target,
-        { opacity: [0, 1], y: ['-2rem', '0rem'] },
+        { opacity: [0, 1], y: ['2rem', '0rem'] },
         {
           duration: 1,
           easing: [0.17, 0.55, 0.75, 1],

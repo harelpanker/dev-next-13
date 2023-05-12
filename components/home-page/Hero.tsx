@@ -18,10 +18,11 @@ const Hero: FC<HeroProps> = ({}) => {
         { opacity: [0, 1], y: ['20%', '0%'] },
         { duration: 1.5, at: 0.5 },
       ],
+      ['figure > img', { opacity: [0, 1] }, { duration: 0.7, at: 0.7 }],
       [
-        'figure',
-        { opacity: [0, 1], y: ['30%', '0%'] },
-        { duration: 1.5, at: 0.7 },
+        '.bottom_content > p, .bottom_content > a',
+        { opacity: [0, 1] },
+        { duration: 0.7 },
       ],
     ]);
 
@@ -49,9 +50,9 @@ const Hero: FC<HeroProps> = ({}) => {
       })
     );
     scroll(
-      animate('figure > img', {
-        y: ['0%', '-50%'],
-        offset: ['start end', 'end end'],
+      animate('figure', {
+        y: ['0%', '50%'],
+        offset: ['start end', 'end end', 'start start', 'end start'],
       })
     );
   }, []);
