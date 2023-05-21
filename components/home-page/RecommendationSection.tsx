@@ -30,7 +30,7 @@ export default async function RecommendationSection() {
             className='group flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-5'>
             <div className='relative p-1 border border-slate-900/50 rounded-full shrink-0'>
               <Image
-                className='rounded-full relative z-20 w-24 h-24 lg:w-auto lg:h-auto'
+                className='rounded-full relative z-20 w-24 h-24'
                 src={data[0].profileImage.url}
                 alt={data[0].name}
                 width={180}
