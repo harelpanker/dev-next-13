@@ -1,13 +1,17 @@
-import Image from 'next/image';
-import noise from '/public/images/noise.webp';
-import Container from '../ui/Container';
 import Link from 'next/link';
+
+import Container from '../ui/Container';
+import CompanyLogos from './CompanyLogos';
+
+import noise from '/public/images/noise.webp';
 
 const Hero = () => {
   return (
-    <section className='relative flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
+    <div
+      className={`relative flex flex-col gap-6 items-center lg:py-28 lg:px-12`}
+      style={{}}>
       <Container>
-        <div className='flex flex-col items-center text-center gap-7 md:gap-10'>
+        <section className='flex flex-col items-center text-center gap-7 md:gap-10'>
           <div className='flex flex-col items-center gap-4 md:gap-8'>
             <h1 className='font-medium text-4xl md:text-8xl'>
               Harel Panker{' '}
@@ -28,19 +32,20 @@ const Hero = () => {
             </span>
             <span className='absolute -top-[200%] -left-[10%] aspect-square w-[120%] z-10 bg-gradient-to-br from-[#3245ff] to-[#bc52ee] group-hover:motion-safe:animate-spin-slow'></span>
           </Link>
-        </div>
+        </section>
+        <CompanyLogos />
       </Container>
       <div
         style={{
           background: `url(${noise.src}) repeat,
-        linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%)`,
+          linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%)`,
           backgroundBlendMode: 'overlay',
           WebkitMaskImage:
             'radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%)',
           maskImage: 'radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%)',
         }}
-        className='absolute -z-10 top-0 bottom-[10%] w-[150%] -left-1/4 rotate-90 md:rotate-0 scale-[1.8] md:scale-1'></div>
-    </section>
+        className='absolute -z-10 -top-44 md:top-0 bottom-0 w-[150%] max-h-[300px]  md:max-h-[540px] -left-1/4 rotate-90 md:rotate-0 scale-[1.8] md:scale-1'></div>
+    </div>
   );
 };
 
