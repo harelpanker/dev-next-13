@@ -8,7 +8,7 @@ import noise from '/public/images/noise.webp';
 const Hero = () => {
   return (
     <div
-      className={`relative flex flex-col gap-6 items-center lg:py-28 lg:px-12`}
+      className={`relative flex flex-col gap-6 items-center pt-16 lg:pt-28 pb-40 lg:px-12`}
       style={{}}>
       <Container>
         <section className='flex flex-col items-center text-center gap-7 md:gap-10'>
@@ -33,6 +33,7 @@ const Hero = () => {
             <span className='absolute -top-[200%] -left-[10%] aspect-square w-[120%] z-10 bg-gradient-to-br from-[#3245ff] to-[#bc52ee] group-hover:motion-safe:animate-spin-slow'></span>
           </Link>
         </section>
+        {/* companys logos */}
         <CompanyLogos />
       </Container>
       <div

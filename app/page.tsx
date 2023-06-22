@@ -1,17 +1,32 @@
 import Hero from '@/components/home-page/Hero';
-import RecommendationSection from '@/components/home-page/RecommendationSection';
-import WorkSection from '@/components/home-page/WorkSection';
-import CvButton from '@/components/layout/CvButton';
+import About from '@/components/home-page/About';
 
 export default function Home() {
   return (
-    <div className='flex flex-col justify-center relative gap-32 lg:gap-0 py-12 lg:py-20'>
+    <div className='flex flex-col justify-center relative lg:gap-0 py-12 lg:py-20'>
       {/* hero */}
       <Hero />
-      {/* companys logos */}
-      {/* about */}
-      {/* recommendations */}
-      {/* cta */}
+      <div className='relative'>
+        <div className='relative z-20'>
+          {/* about */}
+          <About />
+          {/* recommendations */}
+          {/* cta */}
+        </div>
+        <div
+          style={{
+            backgroundSize: '20px 20px',
+            backgroundImage:
+              'linear-gradient(to right,#23262D 1px,transparent 1px),linear-gradient(to bottom,#23262D 1px,transparent 1px)',
+            backgroundPosition: 'top center',
+            imageRendering: 'pixelated',
+            maskImage:
+              'linear-gradient(to bottom,transparent,10%,white,90%,transparent)',
+            WebkitMaskImage:
+              'linear-gradient(to bottom,transparent,10%,white,90%,transparent)',
+          }}
+          className='absolute z-10 inset-0'></div>
+      </div>
     </div>
   );
 }
