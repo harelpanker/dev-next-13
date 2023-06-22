@@ -1,10 +1,8 @@
-import { FC } from 'react';
-import { logosData } from '@/public/lib/company_logos';
 import Image from 'next/image';
 
-type CompanyLogosProps = {};
+import { logosData } from '@/utils/company_logos';
 
-const CompanyLogos: FC<CompanyLogosProps> = ({}) => {
+const CompanyLogos = () => {
   return (
     <div className='mt-20 md:mt-28 flex flex-col gap-4 items-center'>
       <h2 className='md:text-2xl font-medium opacity-80'>
@@ -17,7 +15,7 @@ const CompanyLogos: FC<CompanyLogosProps> = ({}) => {
               <Image
                 src={logo.src}
                 alt={logo.alt}
-                className='md:w-20 md:max-h-[32px] max-h-[28px] w-16'
+                className='md:w-20 max-h-[32px] w-16'
               />
             </a>
           </li>
