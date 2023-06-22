@@ -1,48 +1,45 @@
-'use client';
-
-import { FC } from 'react';
 import Image from 'next/image';
-import hero_image from '../../public/images/2.jpeg';
+import noise from '/public/images/noise.webp';
 import Container from '../ui/Container';
 import Link from 'next/link';
 
-type HeroProps = {};
-
-const Hero: FC<HeroProps> = ({}) => {
+const Hero = () => {
   return (
-    <section className='flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
+    <section className='relative flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
       <Container>
-        <div className='flex flex-col xl:grid grid-cols-8 grid-rows-4'>
-          <figure className='relative mb-8 xl:mb-0 col-span-4 row-span-3 col-start-2 row-start-2 grayscale hover:grayscale-0 transition duration-300'>
-            <Image
-              priority
-              src={hero_image}
-              alt='Harel Panker - Fron end developer'
-              className='w-full h-full'
-            />
-          </figure>
-          <h1 className='static xl:absolute mix-blend-multiply z-10 text-7xl font-serif md:text-9xl xl:text-[16rem] 2xl:text-[22rem] font-bold'>
-            <span>Hello</span>
-            <span className='block xl:ml-36 whitespace-nowrap'>
-              I&apos;m Harel
-            </span>
-          </h1>
-          <div className='row-start-4 col-start-6 col-span-3 flex flex-col xl:p-6 max-w-xl justify-end items-start gap-3 text-xl md:text-2xl font-medium'>
-            <p>
+        <div className='flex flex-col items-center text-center gap-7 md:gap-10'>
+          <div className='flex flex-col items-center gap-4 md:gap-8'>
+            <h1 className='font-medium text-4xl md:text-8xl'>
+              Harel Panker{' '}
+              <span className='block text-2xl md:text-6xl'>
+                Front End Web Developer
+              </span>
+            </h1>
+            <p className='max-w-3xl md:text-2xl'>
               A front-end engineer working as a freelancer with leading agencies
               and startups, developing products that meet the users&apos; needs.
             </p>
-            <Link
-              className='flex flex-col gap-[2px] group text-lg'
-              href='/about'>
-              <span className='relative z-20'>My full set of skills</span>
-              <div className='bg-slate-200 w-full h-[3px] relative overflow-hidden'>
-                <div className='absolute h-full w-full bg-slate-900 transition duration-300 -translate-x-full group-hover:translate-x-0'></div>
-              </div>
-            </Link>
           </div>
+          <Link
+            className='relative z-10 overflow-hidden p-1 rounded-full group hover:-translate-y-2 transition duration-500'
+            href='#'>
+            <span className='text-transparent bg-clip-text bg-gradient-to-br from-[#3245ff] to-[#bc52ee] md:text-lg font-medium relative z-30 w-full px-6 md:px-10 py-2 md:py-3 h-full flex justify-center items-center'>
+              About and Skills
+            </span>
+            <span className='absolute -top-[200%] -left-[10%] aspect-square w-[120%] z-10 bg-gradient-to-br from-[#3245ff] to-[#bc52ee] group-hover:motion-safe:animate-spin-slow'></span>
+          </Link>
         </div>
       </Container>
+      <div
+        style={{
+          background: `url(${noise.src}) repeat,
+        linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%)`,
+          backgroundBlendMode: 'overlay',
+          WebkitMaskImage:
+            'radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%)',
+          maskImage: 'radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%)',
+        }}
+        className='absolute -z-10 top-0 bottom-[10%] w-[150%] -left-1/4 rotate-90 md:rotate-0 scale-[1.8] md:scale-1'></div>
     </section>
   );
 };
