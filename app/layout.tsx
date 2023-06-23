@@ -83,7 +83,7 @@ export default function RootLayout({ children }: RootProps) {
         <GoogleTagManeger />
       </head>
       <Body>
-        <div className='flex flex-col min-h-dvh justify-between'>
+        <div className='flex flex-col min-h-dvh justify-between w-full overflow-hidden'>
           <main className='grow relative z-10'>{children}</main>
         </div>
       </Body>

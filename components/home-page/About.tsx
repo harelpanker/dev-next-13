@@ -1,15 +1,18 @@
-import { FC } from 'react';
+'use client';
+
+import Marquee from 'react-fast-marquee';
 import Container from '../ui/Container';
 import TypographyH2 from '../ui/TypographyH2';
 
-type AboutProps = {};
+import noise from '/public/images/noise.webp';
+import MarqueeRow from './MarqueeRow';
 
-const About: FC<AboutProps> = ({}) => {
+const About = ({}) => {
   return (
-    <section>
+    <section id='about'>
       <Container>
-        <div className='flex flex-col gap-12'>
-          <div className='flex flex-col gap-10 text-center items-center'>
+        <div className='flex flex-col gap-12 items-center'>
+          <div className='flex flex-col gap-4 md:gap-10 text-center items-center'>
             <TypographyH2 text='Skill set' />
             <p className='max-w-3xl md:text-2xl'>
               My experience working as a freelance web developer has provided me
@@ -17,9 +20,48 @@ const About: FC<AboutProps> = ({}) => {
               including React, Next.js, Tailwind CSS, TypeScript, and more.
             </p>
           </div>
-          <div></div>
+
+          <div className='max-w-full'>
+            <div className='flex flex-1 flex-col gap-6 py-6 text-left w-full max-w-4xl relative noise-panel'>
+              {/* merquee */}
+              <Marquee speed={10} gradient={false} className='w-full py-4 flex'>
+                <MarqueeRow />
+                <MarqueeRow />
+              </Marquee>
+
+              <div className='px-6 grid grid-cols-1 gap-4 md:grid-cols-2'>
+                <h3 className='text-xl md:text-2xl font-medium'>
+                  I know a thing <span className='md:block'>or two about:</span>
+                </h3>
+                <p>
+                  Strongly emphasize the basics of web development, from
+                  semantic HTML, CSS, and JavaScript / TypeScript, these are the
+                  things I use on a daily basis.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
+      <style jsx>{`
+        .noise-panel {
+          color: rgb(191 193 201);
+          position: relative;
+          isolation: isolate;
+          border-width: 1px;
+          border-color: rgb(52 56 65);
+          background-color: rgb(35 38 45);
+        }
+        .noise-panel:before {
+          position: absolute;
+          inset: 0;
+          z-index: -20;
+          opacity: 0.4;
+          mix-blend-mode: overlay;
+          content: '';
+          background-image: url(${noise.src});
+        }
+      `}</style>
     </section>
   );
 };
