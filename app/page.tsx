@@ -7,7 +7,7 @@ export default function Home() {
     <div className='flex flex-col justify-center relative lg:gap-0 py-12 lg:py-20'>
       <Hero />
       <div className='relative'>
-        <div className='relative grid gap-32 sm:gap-40 md:gap-48 lg:gap-64 z-20'>
+        <div className='relative grid gap-32 sm:gap-40 md:gap-48 lg:gap-64 z-20 pb-[50vh]'>
           <About />
           <WorkSection />
           {/* recommendations */}

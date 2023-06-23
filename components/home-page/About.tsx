@@ -25,6 +25,7 @@ const About = () => {
             <div className='flex flex-col gap-6 py-6 text-left w-full max-w-4xl relative noise-panel overflow-hidden'>
               <Marquee
                 speed={10}
+                pauseOnHover
                 gradient={false}
                 className='max-w-[90vw] w-full py-4 flex'>
                 <MarqueeRow />
