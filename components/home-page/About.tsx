@@ -12,14 +12,14 @@ const About = ({}) => {
     <section id='about'>
       <Container>
         <div className='flex flex-col gap-12 items-center'>
-          <div className='flex flex-col gap-4 md:gap-10 text-center items-center'>
+          <header className='flex flex-col gap-4 md:gap-10 text-center items-center'>
             <TypographyH2 text='Skill set' />
             <p className='max-w-3xl md:text-2xl'>
               My experience working as a freelance web developer has provided me
               with a broad spectrum of knowledge in a range of technologies,
               including React, Next.js, Tailwind CSS, TypeScript, and more.
             </p>
-          </div>
+          </header>
 
           <div className='max-w-full'>
             <div className='flex flex-1 flex-col gap-6 py-6 text-left w-full max-w-4xl relative noise-panel'>

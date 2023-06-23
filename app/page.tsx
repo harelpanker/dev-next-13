@@ -1,5 +1,6 @@
 import Hero from '@/components/home-page/Hero';
 import About from '@/components/home-page/About';
+import WorkSection from '@/components/home-page/WorkSection';
 
 export default function Home() {
   return (
@@ -8,8 +9,8 @@ export default function Home() {
       <Hero />
       <div className='relative'>
         <div className='relative z-20'>
-          {/* about */}
           <About />
+          <WorkSection />
           {/* recommendations */}
           {/* cta */}
         </div>
