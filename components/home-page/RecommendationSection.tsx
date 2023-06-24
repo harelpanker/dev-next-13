@@ -1,56 +1,115 @@
+'use client';
+
 import Image from 'next/image';
 import Container from '../ui/Container';
-import { getRecommendations } from '@/services';
-import { Linkedin } from 'lucide-react';
+import TypographyH2 from '../ui/TypographyH2';
 
-const getData = async () => {
-  const recommendations = (await getRecommendations()) || [];
-  const sortedRecommendations = recommendations.filter(
-    (item: { name: string }) => item.name === 'Elizabeth Cohen'
+import noise from '/public/images/noise.webp';
+import eitan from '/public/images/quotes/eitan.webp';
+import elizabeth from '/public/images/quotes/elizabeth.webp';
+import shimon from '/public/images/quotes/shimon.webp';
+
+const RecommendationSection = () => {
+  return (
+    <>
+      <section className='relative w-full'>
+        <Container>
+          <div className='flex gap-12 flex-col lg:grid lg:grid-cols-[1fr_1.75fr] relative max-w-7xl mx-auto'>
+            <header className='flex flex-col items-start gap-6 w-full max-w-xl'>
+              <TypographyH2 text="What my clients' say" />
+              <p className='max-w-3xl md:text-2xl'>
+                Thrilled to be joining forces with exceptional individuals and
+                esteemed companies throughout my path!
+              </p>
+            </header>
+            <div className='quotes relative flex flex-col items-center lg:items-start'>
+              <article className='relative border flex flex-col gap-3 p-5 shadow-md ml-16 -translate-y-4 scale-90'>
+                <header className='flex items-center gap-4'>
+                  <Image
+                    src={eitan}
+                    alt='Eitan'
+                    className='h-10 w-10 rounded-full border border-white'
+                  />
+                  <strong className='text-white'>Eitan</strong>
+                </header>
+                <p>
+                  ...He&apos;s hard-working, creative, energetic, and very
+                  knowledgeable. In all honesty, I could not recommend him more
+                  highly.
+                </p>
+              </article>
+              <article className='relative border flex flex-col gap-3 p-5 shadow-md z-20 ml-6'>
+                <header className='flex items-center gap-4'>
+                  <Image
+                    src={elizabeth}
+                    alt='Elizabeth'
+                    className='h-10 w-10 rounded-full border border-white'
+                  />
+                  <strong className='text-white'>Elizabeth</strong>
+                </header>
+                <p>
+                  I have worked with Harel as a freelance developer at Antidote
+                  Health. He processes a great deal of knowledge and experience
+                  in the field of development, and always does extensive
+                  research when investigating if something can be done. Harel
+                  has great communication skills and professionalism and is
+                  always quick and efficient when completing projects. He has
+                  been a great pleasure to work with and I highly recommend him
+                  to any company looking to partner with him in development.
+                </p>
+              </article>
+              <article className='relative border flex flex-col gap-3 p-5 shadow-md z-10 lg:ml-24 -translate-y-6 scale-90'>
+                <header className='flex items-center gap-4'>
+                  <Image
+                    src={shimon}
+                    alt='Shimon'
+                    className='h-10 w-10 rounded-full border border-white'
+                  />
+                  <strong className='text-white'>Shimon</strong>
+                </header>
+                <p>
+                  A very talented and resourceful developer that I am happy to
+                  work with.
+                </p>
+              </article>
+            </div>
+          </div>
+        </Container>
+      </section>
+      <style jsx>{`
+        article {
+          position: relative;
+          isolation: isolate;
+          border-width: 1px;
+          border-color: rgb(52 56 65);
+          background-color: rgb(35 38 45);
+        }
+        article > p {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+        }
+
+        .quotes::before {
+          position: absolute;
+          content: '';
+          aspect-ratio: 1/1;
+          width: 90%;
+          left: -10%;
+          top: -35%;
+          background: url(${noise.src}) repeat,
+            linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+          background-blend-mode: overlay;
+          -webkit-mask-image: radial-gradient(
+            rgba(0, 0, 0, 1),
+            transparent 60%
+          );
+          mask-image: radial-gradient(rgba(0, 0, 0, 1), transparent 60%);
+        }
+      `}</style>
+    </>
   );
-  return sortedRecommendations;
 };
 
-export default async function RecommendationSection() {
-  const data = await getData();
-
-  return (
-    <section className='flex flex-col gap-6 items-center lg:py-28 lg:px-12'>
-      <Container size='md'>
-        <div className='flex flex-col gap-6'>
-          <blockquote
-            className='text-3xl lg:text-5xl font-medium italic'
-            style={{ lineHeight: 1.65 }}>
-            {data[0].quote}
-          </blockquote>
-          <a
-            href={data[0].linkedin}
-            target='_blank'
-            rel='noopener'
-            className='group flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-5'>
-            <div className='relative p-1 border border-slate-900/50 rounded-full shrink-0'>
-              <Image
-                className='rounded-full relative z-20 w-24 h-24'
-                src={data[0].profileImage.url}
-                alt={data[0].name}
-                width={180}
-                height={180}
-              />
-              <div className='opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center text-slate-50 w-24 h-24 lg:w-[100px] lg:h-[100px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-full bg-slate-900/50 z-20'>
-                <Linkedin size={32} />
-              </div>
-            </div>
-            <div>
-              <h2 className='font-semibold text-2xl lg:text-3xl'>
-                {data[0].name}
-              </h2>
-              <p className='text-slate-900/90 text-lg lg:text-2xl'>
-                {data[0].position}
-              </p>
-            </div>
-          </a>
-        </div>
-      </Container>
-    </section>
-  );
-}
+export default RecommendationSection;

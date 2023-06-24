@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 import Container from '../ui/Container';
 import TypographyH2 from '../ui/TypographyH2';
@@ -22,7 +22,11 @@ const WorkSection = () => {
     name: 'datree',
   });
 
-  const handleImageOrder = (id: string, image: any, name: string) => {
+  const handleImageOrder = (
+    id: string,
+    image: StaticImageData,
+    name: string
+  ) => {
     setOrder({ id: id, image: image, name: name });
   };
 

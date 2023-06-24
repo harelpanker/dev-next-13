@@ -26,6 +26,9 @@ module.exports = {
       dvh: '100dvh',
       screen: '100vh',
     },
+    lineClamp: {
+      3: '3',
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 };

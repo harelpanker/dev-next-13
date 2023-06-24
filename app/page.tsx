@@ -1,6 +1,7 @@
 import Hero from '@/components/home-page/Hero';
 import About from '@/components/home-page/About';
 import WorkSection from '@/components/home-page/WorkSection';
+import RecommendationSection from '@/components/home-page/RecommendationSection';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <div className='relative grid gap-32 sm:gap-40 md:gap-48 lg:gap-64 z-20 pb-[50vh]'>
           <About />
           <WorkSection />
-          {/* recommendations */}
+          <RecommendationSection />
           {/* cta */}
         </div>
         <div
