@@ -2,9 +2,6 @@ import './globals.css';
 import { Metadata } from 'next';
 import GoogleTagManeger from '@/utils/GoogleTagManager';
 import localFont from 'next/font/local';
-import Navbar from '@/components/navbar/Navbar';
-import Body from '@/components/layout/Body';
-import Footer from '@/components/footer/Footer';
 
 type RootProps = {
   children: React.ReactNode;
@@ -78,15 +75,14 @@ export default function RootLayout({ children }: RootProps) {
     <html
       lang='en'
       dir='ltr'
-      className={`${general.variable} ${cabinetgrotesk.variable}`}>
+      className={`${general.variable} ${cabinetgrotesk.variable} scroll-smooth`}>
       <head>
         <GoogleTagManeger />
       </head>
-      <Body>
-        <div className='flex flex-col min-h-dvh justify-between w-full overflow-hidden'>
-          <main className='grow relative z-10'>{children}</main>
-        </div>
-      </Body>
+      <body
+        className={`antialiased bg-theme_black text-theme_white flex flex-col min-h-dvh justify-between w-full`}>
+        <main className='grow relative z-10 overflow-hidden'>{children}</main>
+      </body>
     </html>
   );
 }

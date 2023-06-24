@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 
-import Container from '../ui/Container';
-import TypographyH2 from '../ui/TypographyH2';
+import Container from '@/components/ui/Container';
+import TypographyH2 from '@/components/ui/TypographyH2';
 
 import { Linkedin } from 'lucide-react';
 

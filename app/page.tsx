@@ -1,7 +1,8 @@
-import Hero from '@/components/home-page/Hero';
-import About from '@/components/home-page/About';
-import WorkSection from '@/components/home-page/WorkSection';
-import RecommendationSection from '@/components/home-page/RecommendationSection';
+import About from './(home-components)/About';
+import CTA from './(home-components)/CTA';
+import Hero from './(home-components)/Hero';
+import RecommendationSection from './(home-components)/RecommendationSection';
+import WorkSection from './(home-components)/WorkSection';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
           <About />
           <WorkSection />
           <RecommendationSection />
-          {/* cta */}
+          <CTA />
         </div>
         <div
           style={{

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-import Container from '../ui/Container';
+import Container from '@/components/ui/Container';
 import CompanyLogos from './CompanyLogos';
 
 import noise from '/public/images/noise.webp';

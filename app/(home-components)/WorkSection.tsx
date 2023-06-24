@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 
-import Container from '../ui/Container';
-import TypographyH2 from '../ui/TypographyH2';
+import Container from '@/components/ui/Container';
+import TypographyH2 from '@/components/ui/TypographyH2';
 
 import { Plus } from 'lucide-react';
 import * as Accordion from '@radix-ui/react-accordion';

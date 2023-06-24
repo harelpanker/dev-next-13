@@ -1,8 +1,8 @@
 'use client';
 
 import Marquee from 'react-fast-marquee';
-import Container from '../ui/Container';
-import TypographyH2 from '../ui/TypographyH2';
+import Container from '@/components/ui/Container';
+import TypographyH2 from '../../components/ui/TypographyH2';
 import MarqueeRow from './MarqueeRow';
 
 import noise from '/public/images/noise.webp';
