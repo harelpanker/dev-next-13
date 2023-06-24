@@ -1,8 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+
 import Container from '../ui/Container';
 import TypographyH2 from '../ui/TypographyH2';
+
+import { Linkedin } from 'lucide-react';
 
 import noise from '/public/images/noise.webp';
 import eitan from '/public/images/quotes/eitan.webp';
@@ -31,6 +34,12 @@ const RecommendationSection = () => {
                     className='h-10 w-10 rounded-full border border-white'
                   />
                   <strong className='text-white'>Eitan</strong>
+                  <a
+                    target='_blank'
+                    rel='noreferrer noopener'
+                    href='https://www.linkedin.com/in/eitanarmon/'>
+                    <Linkedin className='h-4 w-4' />
+                  </a>
                 </header>
                 <p>
                   ...He&apos;s hard-working, creative, energetic, and very
@@ -46,6 +55,12 @@ const RecommendationSection = () => {
                     className='h-10 w-10 rounded-full border border-white'
                   />
                   <strong className='text-white'>Elizabeth</strong>
+                  <a
+                    target='_blank'
+                    rel='noreferrer noopener'
+                    href='https://www.linkedin.com/in/amandaelizabethcrum/'>
+                    <Linkedin className='h-4 w-4' />
+                  </a>
                 </header>
                 <p>
                   I have worked with Harel as a freelance developer at Antidote
@@ -66,6 +81,12 @@ const RecommendationSection = () => {
                     className='h-10 w-10 rounded-full border border-white'
                   />
                   <strong className='text-white'>Shimon</strong>
+                  <a
+                    target='_blank'
+                    rel='noreferrer noopener'
+                    href='https://www.linkedin.com/in/tolts/'>
+                    <Linkedin className='h-4 w-4' />
+                  </a>
                 </header>
                 <p>
                   A very talented and resourceful developer that I am happy to
