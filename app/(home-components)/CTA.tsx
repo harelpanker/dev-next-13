@@ -29,7 +29,7 @@ const CTA = () => {
         <Image src={logo} alt='logo' />
         {/* title */}
         <h2 className=' text-3xl md:text-6xl font-medium my-8'>
-          <span className='md:block'>Let&lsquo;s built something </span>awesome
+          <span className='md:block'>Let&lsquo;s build something </span>awesome
           together!
         </h2>
         {/* cta */}

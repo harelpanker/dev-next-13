@@ -38,9 +38,8 @@ const About = () => {
                   I know a thing <span className='md:block'>or two about:</span>
                 </h3>
                 <p>
-                  Strongly emphasize the basics of web development, from
-                  semantic HTML, CSS, and JavaScript / TypeScript, these are the
-                  things I use on a daily basis.
+                  Semantic HTML, SCC, SCSS, TailwindCSS, JavaScript, TypeScript,
+                  ReactJS, NextJS, Figma, Webflow, UI/U, Technical SEO and More.
                 </p>
               </div>
             </div>
