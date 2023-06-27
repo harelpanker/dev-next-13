@@ -8,13 +8,18 @@ import logo from 'public/images/p.svg';
 import ContactMail from '../ui/ContactMail';
 
 const Navbar = () => {
-  const [scroll] = useWindowScroll();
+  const [scroll, scrollTo] = useWindowScroll();
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(!open);
     document.querySelector('body')?.classList.toggle('overflow-hidden');
     document.querySelector('body')?.classList.toggle('h-full');
+  };
+
+  const scrollToTop = () => {
+    scrollTo({ y: 0 });
+    handleOpen();
   };
   return (
     <>
@@ -27,7 +32,10 @@ const Navbar = () => {
         <Container>
           <div className='flex w-full items-center justify-between relative z-20'>
             {/* logo */}
-            <Image src={logo} alt='logo' className='h-8' />
+            <button aria-label='Scroll to top' onClick={() => scrollToTop()}>
+              <Image src={logo} alt='logo' className='h-8' />
+            </button>
+
             {/* nav button mobile  */}
             <button
               onClick={handleOpen}
@@ -52,21 +60,15 @@ const Navbar = () => {
               <ul className='justify-between gap-6 flex items-center'>
                 {/* skills */}
                 <li>
-                  <a onClick={handleOpen} href='/#skills'>
-                    Skills
-                  </a>
+                  <a href='/#skills'>Skills</a>
                 </li>
                 {/* work */}
                 <li>
-                  <a onClick={handleOpen} href='/#work'>
-                    Work
-                  </a>
+                  <a href='/#work'>Work</a>
                 </li>
                 {/* Recommendations */}
                 <li>
-                  <a onClick={handleOpen} href='/#recommendations'>
-                    Recommendations
-                  </a>
+                  <a href='/#recommendations'>Recommendations</a>
                 </li>
                 <li className='ml-'>
                   <a

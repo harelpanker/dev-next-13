@@ -11,6 +11,7 @@ import noise from '/public/images/noise.webp';
 import eitan from '/public/images/quotes/eitan.webp';
 import elizabeth from '/public/images/quotes/elizabeth.webp';
 import shimon from '/public/images/quotes/shimon.webp';
+import SectionId from './SectionId';
 
 const RecommendationSection = () => {
   return (
@@ -96,6 +97,7 @@ const RecommendationSection = () => {
             </div>
           </div>
         </Container>
+        <SectionId id='recommendations' />
       </section>
       <style jsx>{`
         article {

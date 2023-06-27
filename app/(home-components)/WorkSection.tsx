@@ -14,6 +14,7 @@ import datree from '/public/images/sites/datree.png';
 
 import styles from './styles.module.css';
 import { workData } from '@/utils/work_data';
+import SectionId from './SectionId';
 
 const WorkSection = () => {
   const [order, setOrder] = useState({
@@ -109,6 +110,7 @@ const WorkSection = () => {
             </div>
           </div>
         </Container>
+        <SectionId id='work' />
       </section>
       <style jsx>{`
         .accordion_item {

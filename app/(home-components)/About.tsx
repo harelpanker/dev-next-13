@@ -6,10 +6,11 @@ import TypographyH2 from '../../components/ui/TypographyH2';
 import MarqueeRow from './MarqueeRow';
 
 import noise from '/public/images/noise.webp';
+import SectionId from './SectionId';
 
 const About = () => {
   return (
-    <section className='relative max-w-full' id='about'>
+    <section className='relative max-w-full'>
       <Container>
         <div className='flex flex-col gap-12 items-center'>
           <header className='flex flex-col gap-4 md:gap-10 text-center items-center'>
@@ -46,6 +47,7 @@ const About = () => {
           </div>
         </div>
       </Container>
+      <SectionId id='skills' />
       <style jsx>{`
         .noise-panel {
           color: rgb(191 193 201);
