@@ -6,7 +6,7 @@ const CompanyLogos = () => {
   return (
     <section className='mt-20 md:mt-28 flex flex-col gap-4 items-center'>
       <h2 className='md:text-2xl font-medium opacity-80'>
-        I&apos;m proud of working with
+        I am proud to be working with
       </h2>
       <ul className='flex flex-wrap justify-center items-center gap-5 md:gap-10'>
         {logosData.map((logo) => (
