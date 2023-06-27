@@ -1,12 +1,15 @@
 'use client';
 
 import { useEffect } from 'react';
+
 import Image from 'next/image';
+
 import { inView, animate } from 'motion';
 
 import logo from 'public/images/p.svg';
 import star from 'public/images/star.svg';
 import noise from '/public/images/noise.webp';
+import ContactMail from '@/components/ui/ContactMail';
 
 const CTA = () => {
   useEffect(() => {
@@ -30,14 +33,7 @@ const CTA = () => {
           together!
         </h2>
         {/* cta */}
-        <button
-          className='relative z-10 overflow-hidden p-1 rounded-full group hover:-translate-y-2 transition duration-500'
-          aria-label='Open modal'>
-          <span className='text-transparent bg-clip-text bg-gradient-to-br from-[#3245ff] to-[#bc52ee] md:text-lg font-medium relative z-30 w-full px-6 md:px-10 py-2 md:py-3 h-full flex justify-center items-center'>
-            Contact me
-          </span>
-          <span className='absolute -top-[200%] -left-[10%] aspect-square w-[120%] z-10 bg-gradient-to-br from-[#3245ff] to-[#bc52ee] group-hover:motion-safe:animate-spin-slow'></span>
-        </button>
+        <ContactMail />
         {/* star */}
         <Image
           className='relative -mt-12 lg:-mt-16 -bottom-24 lg:-bottom-32 w-full max-w-[75vw] lg:max-w-md star'

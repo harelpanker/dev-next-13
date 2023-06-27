@@ -18,7 +18,7 @@ const RecommendationSection = () => {
       <section className='relative w-full'>
         <Container>
           <div className='flex gap-12 flex-col lg:grid lg:grid-cols-[1fr_1.75fr] relative max-w-7xl mx-auto'>
-            <header className='flex flex-col items-start gap-6 w-full max-w-xl'>
+            <header className='text-center lg:text-left flex flex-col items-center lg:items-start gap-6 w-full max-w-xl'>
               <TypographyH2 text="What my clients' say" />
               <p className='max-w-3xl md:text-2xl'>
                 Thrilled to be joining forces with exceptional individuals and
@@ -127,6 +127,12 @@ const RecommendationSection = () => {
             transparent 60%
           );
           mask-image: radial-gradient(rgba(0, 0, 0, 1), transparent 60%);
+        }
+        @media screen and (max-width: 992px) {
+          .quotes::before {
+            width: 150%;
+            top: -14%;
+          }
         }
       `}</style>
     </>

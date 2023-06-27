@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import GoogleTagManeger from '@/utils/GoogleTagManager';
 import localFont from 'next/font/local';
 import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
 
 type RootProps = {
   children: React.ReactNode;
@@ -82,6 +83,7 @@ export default function RootLayout({ children }: RootProps) {
       </head>
       <body
         className={`antialiased bg-theme_black text-theme_white flex flex-col min-h-dvh justify-between w-full`}>
+        <Navbar />
         <main className='grow relative z-10 overflow-hidden'>{children}</main>
         <Footer />
       </body>
