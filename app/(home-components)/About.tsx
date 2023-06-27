@@ -39,7 +39,7 @@ const About = () => {
                 </h3>
                 <p>
                   Semantic HTML, SCC, SCSS, TailwindCSS, JavaScript, TypeScript,
-                  ReactJS, NextJS, Figma, Webflow, UI/U, Technical SEO, and
+                  ReactJS, NextJS, Figma, Webflow, UX/UI, Technical SEO, and
                   more.
                 </p>
               </div>
