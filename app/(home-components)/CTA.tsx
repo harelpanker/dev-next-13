@@ -36,7 +36,7 @@ const CTA = () => {
         <ContactMail />
         {/* star */}
         <Image
-          className='relative -mt-12 lg:-mt-16 -bottom-24 lg:-bottom-32 w-full max-w-[75vw] lg:max-w-md star'
+          className='relative -mt-8 lg:-mt-16 -bottom-16 lg:-bottom-32 w-full max-w-[75vw] lg:max-w-md star'
           src={star}
           alt='star'
         />
