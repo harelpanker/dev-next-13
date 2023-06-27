@@ -21,6 +21,7 @@ module.exports = {
       theme_black: '#17191E',
       slate: colors.slate,
       white: colors.white,
+      transparent: colors.transparent,
     },
     minHeight: {
       dvh: '100dvh',
