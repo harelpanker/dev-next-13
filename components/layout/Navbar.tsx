@@ -15,6 +15,7 @@ const Navbar = () => {
     setOpen(!open);
     document.querySelector('body')?.classList.toggle('overflow-hidden');
     document.querySelector('body')?.classList.toggle('h-full');
+    document.querySelector('.cv_button')?.classList.toggle('hidden');
   };
 
   const scrollToTop = () => {
@@ -28,9 +29,9 @@ const Navbar = () => {
           scroll.y > 50 && !open
             ? 'bg-theme_black/70 backdrop-blur drop-shadow-md'
             : ''
-        } lg:px-12 sticky top-0 z-30 py-5 flex items-center -mb-20 transition-all duration-500`}>
+        } lg:px-12 sticky top-0 z-50 py-5 flex items-center -mb-20 transition-all duration-500`}>
         <Container>
-          <div className='flex w-full items-center justify-between relative z-20'>
+          <div className='flex w-full items-center justify-between relative z-50'>
             {/* logo */}
             <button aria-label='Scroll to top' onClick={() => scrollToTop()}>
               <Image src={logo} alt='logo' className='h-8' />
