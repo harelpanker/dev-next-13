@@ -2,9 +2,9 @@ import './globals.css';
 import { Metadata } from 'next';
 import GoogleTagManeger from '@/utils/GoogleTagManager';
 import localFont from 'next/font/local';
-import Navbar from '@/components/navbar/Navbar';
-import Body from '@/components/layout/Body';
-import Footer from '@/components/footer/Footer';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import CvButton from '@/components/layout/CvButton';
 
 type RootProps = {
   children: React.ReactNode;
@@ -78,17 +78,17 @@ export default function RootLayout({ children }: RootProps) {
     <html
       lang='en'
       dir='ltr'
-      className={`${general.variable} ${cabinetgrotesk.variable}`}>
+      className={`${general.variable} ${cabinetgrotesk.variable} scroll-smooth`}>
       <head>
         <GoogleTagManeger />
       </head>
-      <Body>
-        <div className='flex flex-col min-h-dvh justify-between'>
-          <Navbar />
-          <main className='grow relative z-10'>{children}</main>
-          <Footer />
-        </div>
-      </Body>
+      <body
+        className={`antialiased bg-theme_black text-theme_white flex flex-col min-h-dvh justify-between w-full`}>
+        <Navbar />
+        <main className='grow relative z-10 overflow-hidden'>{children}</main>
+        <CvButton />
+        <Footer />
+      </body>
     </html>
   );
 }

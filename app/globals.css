@@ -1,34 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*
-:root {
-  --geist-background-dark: #000;
-  --geist-background-light: #f8fafc;
-  --gradient-from-1: 235 54 127;
-  --gradient-to-1: 121 40 202;
-  --gradient-from-2: 0 112 243;
-  --gradient-to-2: 248 28 229;
-  --gradient-from-3: 247 185 85;
-  --gradient-to-3: 255 0 128;
-  --gradient-from-4: 80 227 194;
-  --gradient-to-4: 0 112 243;
-}
-
-.gradiant_header {
-  background-size: 100% 100%, 100% 100%, 1440px 1px;
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
-footer {
-  background-image: radial-gradient(
-    rgba(0, 0, 0, 0) 1px,
-    var(--background) 1px
-  );
-  background-size: 4px 4px;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  -moz-backdrop-filter: blur(3px);
-}
-*/

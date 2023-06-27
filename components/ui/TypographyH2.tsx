@@ -7,7 +7,7 @@ type TypographyH2Props = {
 const TypographyH2: FC<TypographyH2Props> = (props) => {
   const { text } = props;
   return (
-    <h2 className='text-5xl md:text-8xl xl:text-9xl font-semibold font-serif'>
+    <h2 className='text-4xl md:text-6xl xl:text-7xl font-semibold font-serif'>
       {text}
     </h2>
   );
