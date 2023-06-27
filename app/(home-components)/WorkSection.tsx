@@ -90,6 +90,7 @@ const WorkSection = () => {
                           src={item.image}
                           alt={item.name}
                           className='lg:hidden'
+                          placeholder='blur'
                         />
                       </Accordion.Content>
                       {/*  */}
@@ -103,6 +104,7 @@ const WorkSection = () => {
                     quality={100}
                     className='max-w-[1000px]'
                     src={order.image}
+                    placeholder='blur'
                     alt={order.name}
                   />
                 </figure>
