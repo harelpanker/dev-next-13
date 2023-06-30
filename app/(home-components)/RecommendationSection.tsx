@@ -65,7 +65,7 @@ const RecommendationSection = () => {
                 </header>
                 <p>
                   I have worked with Harel as a freelance developer at Antidote
-                  Health. He processes a great deal of knowledge and experience
+                  Health. He possesses a great deal of knowledge and experience
                   in the field of development, and always does extensive
                   research when investigating if something can be done. Harel
                   has great communication skills and professionalism and is

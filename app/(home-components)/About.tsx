@@ -35,7 +35,8 @@ const About = () => {
 
               <div className='px-6 grid grid-cols-1 gap-4 md:grid-cols-2'>
                 <h3 className='text-xl md:text-2xl font-medium'>
-                  I know a thing <span className='md:block'>or two about:</span>
+                  I also have{' '}
+                  <span className='md:block'>experience utilizing:</span>
                 </h3>
                 <p>
                   Semantic HTML, SCC, SCSS, TailwindCSS, JavaScript, TypeScript,
