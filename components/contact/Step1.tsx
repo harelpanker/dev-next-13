@@ -51,7 +51,7 @@ const Step1: FC<Step1Props> = ({}) => {
           name='name'
           type='text'
           id='name'
-          className='block w-full p-4 text-slate-900 text-3xl lg:text-6xl font-medium border-b-4 border-slate-300 rounded-lg bg-slate-50 sm:text-md focus:ring-purple-500 focus:border-purple-500'
+          className='block w-full px-4 py-2 text-theme_black focus:border-slate-300 text-lg font-medium border-slate-300 rounded-lg bg-slate-50'
         />
         {errors.name ? (
           <p className='text-red-500 mt-2 text-lg font-medium'>
@@ -62,7 +62,7 @@ const Step1: FC<Step1Props> = ({}) => {
 
       <div className='flex w-full justify-start'>
         <button
-          className='text-4xl lg:text-6xl font-medium border-b-4 border-slate-500 hover:border-slate-900 transition duration-500'
+          className='text-2xl font-medium border-b-2 border-theme_white hover:border-theme_black/0 transition duration-500'
           type='submit'>
           Next
         </button>

@@ -1,9 +1,6 @@
 import Image from 'next/image';
-
 import Container from '../ui/Container';
-
 import { FileText, Linkedin, Github, Mail } from 'lucide-react';
-
 import logo from 'public/images/p.svg';
 
 const smLinks = [
@@ -27,7 +24,7 @@ const smLinks = [
 
 const Footer = () => {
   return (
-    <footer className='bg-theme_black px-5 lg-px-12 py-6 lg:py-8 relative z-50 text-theme_white'>
+    <footer className='bg-theme_black px-5 lg-px-12 py-6 lg:py-8 relative z-30 text-theme_white'>
       <Container>
         <div className='flex items-center justify-between'>
           <Image src={logo} alt='logo' className='h-12' />
