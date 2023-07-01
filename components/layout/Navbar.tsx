@@ -6,6 +6,7 @@ import { useWindowScroll } from '@mantine/hooks';
 import Container from '../ui/Container';
 import logo from 'public/images/p.svg';
 import ContactMail from '../ui/ContactMail';
+import ContactModal from '../ui/ContactModal';
 
 const linksData = [
   { name: 'Skills', link: '/#skills' },
@@ -16,6 +17,14 @@ const linksData = [
 const Navbar = () => {
   const [scroll, scrollTo] = useWindowScroll();
   const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeModal = () => setIsOpen(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+    document.querySelector('html')?.classList.remove('scroll-smooth');
+  };
 
   const addScrollSmooth = () =>
     document.querySelector('html')?.classList.add('scroll-smooth');
@@ -78,8 +87,8 @@ const Navbar = () => {
                   </li>
                 ))}
                 <li>
-                  <a
-                    href='mailto:harelpanker@protonmail.com'
+                  <button
+                    onClick={() => openModal()}
                     className={`${
                       scroll.y > 476
                         ? 'bg-theme_white text-theme_black hover:text-theme_white'
@@ -90,7 +99,7 @@ const Navbar = () => {
                     <span className='absolute rounded-full z-10 w-full h-full inset-0 overflow-hidden opacity-0 group-hover:opacity-100'>
                       <span className='absolute opacity-0 group-hover:opacity-100 -top-[200%] -left-[10%] aspect-square w-[120%] z-10 bg-gradient-to-br from-[#3245ff] to-[#bc52ee] group-hover:motion-safe:animate-spin-slow'></span>
                     </span>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </nav>
@@ -116,6 +125,7 @@ const Navbar = () => {
           <ContactMail />
         </div>
       </div>
+      <ContactModal isOpen={isOpen} closeModal={closeModal} />
     </>
   );
 };

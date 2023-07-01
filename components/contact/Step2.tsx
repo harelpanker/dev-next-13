@@ -49,7 +49,7 @@ const Step2: FC<Step2Props> = ({}) => {
         <label
           htmlFor='email'
           className='block mb-2 text-sm font-medium text-slate-50'>
-          Your name
+          Email
         </label>
         <input
           placeholder='Email'
@@ -57,7 +57,7 @@ const Step2: FC<Step2Props> = ({}) => {
           name='email'
           type='text'
           id='email'
-          className='block w-full p-4 text-slate-900 text-3xl lg:text-6xl font-medium border-b-4 border-slate-300 rounded-lg bg-slate-50 sm:text-md focus:ring-purple-500 focus:border-purple-500'
+          className='block w-full px-4 py-2 text-theme_black focus:border-slate-300 text-lg font-medium border-slate-300 rounded-lg bg-slate-50'
         />
         {errors.email ? (
           <p className='text-red-500 mt-2 text-lg font-medium'>
@@ -68,7 +68,7 @@ const Step2: FC<Step2Props> = ({}) => {
 
       <div className='flex w-full justify-start'>
         <button
-          className='text-4xl lg:text-6xl font-medium border-b-4 border-slate-500 hover:border-slate-900 transition duration-500'
+          className='text-2xl font-medium border-b-2 border-theme_white hover:border-theme_black/0 transition duration-500'
           type='submit'>
           Next
         </button>

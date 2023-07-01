@@ -3,16 +3,14 @@ import { useState } from 'react';
 import ContactModal from './ContactModal';
 
 const ContactMail = () => {
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  function closeModal() {
-    setIsOpen(false);
-  }
+  const closeModal = () => setIsOpen(false);
 
-  function openModal() {
+  const openModal = () => {
     setIsOpen(true);
     document.querySelector('html')?.classList.remove('scroll-smooth');
-  }
+  };
 
   return (
     <>

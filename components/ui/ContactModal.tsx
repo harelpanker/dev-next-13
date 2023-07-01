@@ -1,5 +1,10 @@
 import { FC, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
+import { personName, success, step } from '@/store/form-store';
+import Step1 from '../contact/Step1';
+import Step2 from '../contact/Step2';
+import Step3 from '../contact/Step3';
+import { useAtom } from 'jotai';
 
 type ContactModalProps = {
   isOpen: boolean;
@@ -7,6 +12,10 @@ type ContactModalProps = {
 };
 
 const ContactModal: FC<ContactModalProps> = ({ isOpen, closeModal }) => {
+  const [name] = useAtom(personName);
+  const [isSuccess] = useAtom(success);
+  const [state] = useAtom(step);
+
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as='div' className='fixed z-50' onClose={closeModal}>
@@ -18,11 +27,11 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, closeModal }) => {
           leave='ease-in duration-200'
           leaveFrom='opacity-100'
           leaveTo='opacity-0'>
-          <div className='fixed inset-0 bg-black bg-opacity-25' />
+          <div className='fixed inset-0 bg-theme_black/50 backdrop-blur' />
         </Transition.Child>
 
-        <div className='fixed inset-0 overflow-y-auto'>
-          <div className='flex min-h-full items-center justify-center p-4 text-center'>
+        <div className='fixed inset-0 overflow-y-auto flex justify-center items-center'>
+          <div className='flex min-h-full p-4 text-center w-full'>
             <Transition.Child
               as={Fragment}
               enter='ease-out duration-300'
@@ -31,27 +40,21 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, closeModal }) => {
               leave='ease-in duration-200'
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-95'>
-              <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
+              <Dialog.Panel className='w-full border border-theme_white/50 max-w-lg mx-auto transform overflow-hidden rounded-2xl bg-theme_black text-theme_white p-6 text-left align-middle shadow-xl transition-all'>
                 <Dialog.Title
                   as='h3'
-                  className='text-lg font-medium leading-6 text-gray-900'>
-                  Payment successful
+                  className='text-6xl font-serif font-bold mb-10'>
+                  {!isSuccess ? 'Contact me' : `Thank you ${name}!`}
                 </Dialog.Title>
-                <div className='mt-2'>
-                  <p className='text-sm text-gray-500'>
-                    Your payment has been successfully submitted. sent you an
-                    email with all of the details of your order.
-                  </p>
-                </div>
-
-                <div className='mt-4'>
-                  <button
-                    type='button'
-                    className='inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2'
-                    onClick={closeModal}>
-                    Got it, thanks!
-                  </button>
-                </div>
+                {!isSuccess ? (
+                  <>
+                    {state === 1 ? <Step1 /> : null}
+                    {state === 2 ? <Step2 /> : null}
+                    {state === 3 ? <Step3 /> : null}
+                  </>
+                ) : (
+                  <div>I will be back to you in the next work day</div>
+                )}
               </Dialog.Panel>
             </Transition.Child>
           </div>
