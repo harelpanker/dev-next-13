@@ -7,12 +7,22 @@ import Container from '../ui/Container';
 import logo from 'public/images/p.svg';
 import ContactMail from '../ui/ContactMail';
 
+const linksData = [
+  { name: 'Skills', link: '/#skills' },
+  { name: 'Work', link: '/#work' },
+  { name: 'Recommendations', link: '/#recommendations' },
+];
+
 const Navbar = () => {
   const [scroll, scrollTo] = useWindowScroll();
   const [open, setOpen] = useState(false);
 
+  const addScrollSmooth = () =>
+    document.querySelector('html')?.classList.add('scroll-smooth');
+
   const handleOpen = () => {
     setOpen(!open);
+    addScrollSmooth();
     document.querySelector('body')?.classList.toggle('overflow-hidden');
     document.querySelector('body')?.classList.toggle('h-full');
     document.querySelector('.cv_button')?.classList.toggle('hidden');
@@ -20,8 +30,9 @@ const Navbar = () => {
 
   const scrollToTop = () => {
     scrollTo({ y: 0 });
-    handleOpen();
+    open && handleOpen();
   };
+
   return (
     <>
       <header
@@ -59,19 +70,14 @@ const Navbar = () => {
             {/* nav links desktop */}
             <nav className='hidden lg:block'>
               <ul className='justify-between gap-6 flex items-center'>
-                {/* skills */}
+                {linksData.map((link) => (
+                  <li key={link.name}>
+                    <a onClick={() => addScrollSmooth()} href={link.link}>
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
                 <li>
-                  <a href='/#skills'>Skills</a>
-                </li>
-                {/* work */}
-                <li>
-                  <a href='/#work'>Work</a>
-                </li>
-                {/* Recommendations */}
-                <li>
-                  <a href='/#recommendations'>Recommendations</a>
-                </li>
-                <li className='ml-'>
                   <a
                     href='mailto:harelpanker@protonmail.com'
                     className={`${
@@ -97,24 +103,13 @@ const Navbar = () => {
           open ? 'translate-x-0' : 'translate-x-full'
         }`}>
         <ul className='flex flex-col justify-between gap-8 font-medium text-xl'>
-          {/* skills */}
-          <li>
-            <a onClick={handleOpen} href='/#skills'>
-              Skills
-            </a>
-          </li>
-          {/* work */}
-          <li>
-            <a onClick={handleOpen} href='/#work'>
-              Work
-            </a>
-          </li>
-          {/* Recommendations */}
-          <li>
-            <a onClick={handleOpen} href='/#recommendations'>
-              Recommendations
-            </a>
-          </li>
+          {linksData.map((link) => (
+            <li key={link.name}>
+              <a onClick={handleOpen} href={link.link}>
+                {link.name}
+              </a>
+            </li>
+          ))}
         </ul>
         {/* contact */}
         <div className='flex justify-center'>
