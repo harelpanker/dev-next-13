@@ -47,11 +47,11 @@ const Navbar = () => {
       <header
         className={`${
           scroll.y > 50 && !open
-            ? 'bg-theme_black/70 backdrop-blur drop-shadow-md'
+            ? 'bg-theme_black/70 drop-shadow-md backdrop-blur'
             : ''
-        } lg:px-12 sticky top-0 z-50 py-5 flex items-center -mb-20 transition-all duration-500`}>
+        } sticky top-0 z-50 -mb-20 flex items-center py-5 transition-all duration-500 lg:px-12`}>
         <Container>
-          <div className='flex w-full items-center justify-between relative z-50'>
+          <div className='relative z-50 flex w-full items-center justify-between'>
             {/* logo */}
             <button aria-label='Scroll to top' onClick={() => scrollToTop()}>
               <Image src={logo} alt='logo' className='h-8' />
@@ -62,23 +62,23 @@ const Navbar = () => {
               onClick={handleOpen}
               aria-label={`${open ? 'close' : 'open'} menu`}
               type='button'
-              className='flex flex-col w-6 h-6 lg:hidden justify-around'>
+              className='flex h-6 w-6 flex-col justify-around lg:hidden'>
               <div
-                className={`w-full h-px transition bg-theme_white ${
+                className={`h-px w-full bg-theme_white transition ${
                   open
-                    ? '-rotate-45 translate-y-[6px]'
-                    : 'rotate-0 translate-y-[2px]'
+                    ? 'translate-y-[6px] -rotate-45'
+                    : 'translate-y-[2px] rotate-0'
                 }`}></div>
               <div
-                className={`w-full h-px transition bg-theme_white ${
+                className={`h-px w-full bg-theme_white transition ${
                   open
-                    ? 'rotate-45 -translate-y-[6px]'
-                    : 'rotate-0 -translate-y-[2px]'
+                    ? '-translate-y-[6px] rotate-45'
+                    : '-translate-y-[2px] rotate-0'
                 }`}></div>
             </button>
             {/* nav links desktop */}
             <nav className='hidden lg:block'>
-              <ul className='justify-between gap-6 flex items-center'>
+              <ul className='flex items-center justify-between gap-6'>
                 {linksData.map((link) => (
                   <li key={link.name}>
                     <a onClick={() => addScrollSmooth()} href={link.link}>
@@ -93,11 +93,11 @@ const Navbar = () => {
                       scroll.y > 476
                         ? 'bg-theme_white text-theme_black hover:text-theme_white'
                         : ''
-                    } relative ring-1 ring-theme_white overflow-hidden font-medium  group px-8 py-2 rounded-full transition duration-500`}
+                    } group relative overflow-hidden rounded-full px-8  py-2 font-medium ring-1 ring-theme_white transition duration-500`}
                     aria-label='Contact me'>
                     <span className='relative z-20'>Contact</span>
-                    <span className='absolute rounded-full z-10 w-full h-full inset-0 overflow-hidden opacity-0 group-hover:opacity-100'>
-                      <span className='absolute opacity-0 group-hover:opacity-100 -top-[200%] -left-[10%] aspect-square w-[120%] z-10 bg-gradient-to-br from-[#3245ff] to-[#bc52ee] group-hover:motion-safe:animate-spin-slow'></span>
+                    <span className='absolute inset-0 z-10 h-full w-full overflow-hidden rounded-full opacity-0 group-hover:opacity-100'>
+                      <span className='absolute -top-[200%] -left-[10%] z-10 aspect-square w-[120%] bg-gradient-to-br from-[#3245ff] to-[#bc52ee] opacity-0 group-hover:opacity-100 group-hover:motion-safe:animate-spin-slow'></span>
                     </span>
                   </button>
                 </li>
@@ -108,10 +108,10 @@ const Navbar = () => {
       </header>
       {/* links mobile */}
       <div
-        className={`h-100dvh flex flex-col justify-between fixed inset-0 top-0 left-0 w-full z-20 overflow-auto pt-28 px-5 pb-8 bg-theme_black transition ${
+        className={`h-100dvh fixed inset-0 top-0 left-0 z-20 flex w-full flex-col justify-between overflow-auto bg-theme_black px-5 pt-28 pb-8 transition ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}>
-        <ul className='flex flex-col justify-between gap-8 font-medium text-xl'>
+        <ul className='flex flex-col justify-between gap-8 text-xl font-medium'>
           {linksData.map((link) => (
             <li key={link.name}>
               <a onClick={handleOpen} href={link.link}>

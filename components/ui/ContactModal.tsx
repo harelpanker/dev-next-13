@@ -30,8 +30,8 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, closeModal }) => {
           <div className='fixed inset-0 bg-theme_black/50 backdrop-blur' />
         </Transition.Child>
 
-        <div className='fixed inset-0 overflow-y-auto flex justify-center items-center'>
-          <div className='flex min-h-full p-4 text-center w-full'>
+        <div className='fixed inset-0 flex items-center justify-center overflow-y-auto'>
+          <div className='min-h-full flex w-full p-4 text-center'>
             <Transition.Child
               as={Fragment}
               enter='ease-out duration-300'
@@ -40,10 +40,10 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, closeModal }) => {
               leave='ease-in duration-200'
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-95'>
-              <Dialog.Panel className='w-full border border-theme_white/50 max-w-lg mx-auto transform overflow-hidden rounded-2xl bg-theme_black text-theme_white p-6 text-left align-middle shadow-xl transition-all'>
+              <Dialog.Panel className='mx-auto w-full max-w-lg transform overflow-hidden rounded-2xl border border-theme_white/50 bg-theme_black p-6 text-left align-middle text-theme_white shadow-xl transition-all'>
                 <Dialog.Title
                   as='h3'
-                  className='text-6xl font-serif font-bold mb-10'>
+                  className='mb-10 font-serif text-6xl font-bold'>
                   {!isSuccess ? 'Contact me' : `Thank you ${name}!`}
                 </Dialog.Title>
                 {!isSuccess ? (
