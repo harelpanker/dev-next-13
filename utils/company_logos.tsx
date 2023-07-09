@@ -6,6 +6,7 @@ import logo5 from '/public/images/logos/lin.svg';
 import logo6 from '/public/images/logos/permit.svg';
 import logo7 from '/public/images/logos/sedric.svg';
 import logo8 from '/public/images/logos/wordtune.svg';
+import logo9 from '/public/images/logos/port.svg';
 
 export const logosData = [
   {
@@ -28,4 +29,5 @@ export const logosData = [
   { src: logo6, alt: 'Permit', href: 'https://www.permit.io/' },
   { src: logo7, alt: 'Sedric', href: 'https://www.sedric.ai/' },
   { src: logo8, alt: 'Wordtune', href: 'https://www.wordtune.com/read' },
+  { src: logo9, alt: 'Port', href: 'https://www.getport.io/' },
 ];
