@@ -12,8 +12,8 @@ const About = () => {
   return (
     <section className='relative max-w-full'>
       <Container>
-        <div className='flex flex-col gap-12 items-center'>
-          <header className='flex flex-col gap-4 md:gap-10 text-center items-center'>
+        <div className='flex flex-col items-center gap-12'>
+          <header className='flex flex-col items-center gap-4 text-center md:gap-10'>
             <TypographyH2 text='Skill set' />
             <p className='max-w-3xl md:text-2xl'>
               My experience working as a freelance web developer has provided me
@@ -22,24 +22,24 @@ const About = () => {
             </p>
           </header>
 
-          <div className='w-full flex justify-center'>
-            <div className='flex flex-col gap-6 py-6 text-left w-full max-w-4xl relative noise-panel overflow-hidden'>
+          <div className='flex w-full justify-center'>
+            <div className='noise-panel relative flex w-full max-w-4xl flex-col gap-6 overflow-hidden py-6 text-left'>
               <Marquee
                 speed={10}
                 pauseOnHover
                 gradient={false}
-                className='max-w-[90vw] w-full py-4 flex'>
+                className='flex w-full max-w-[90vw] py-4'>
                 <MarqueeRow />
                 <MarqueeRow />
               </Marquee>
 
-              <div className='px-6 grid grid-cols-1 gap-4 md:grid-cols-2'>
-                <h3 className='text-xl md:text-2xl font-medium'>
+              <div className='grid grid-cols-1 gap-4 px-6 md:grid-cols-2'>
+                <h3 className='text-xl font-medium md:text-2xl'>
                   I also have{' '}
                   <span className='md:block'>experience utilizing:</span>
                 </h3>
                 <p>
-                  Semantic HTML, SCC, SCSS, TailwindCSS, JavaScript, TypeScript,
+                  Semantic HTML, CSS, SCSS, TailwindCSS, JavaScript, TypeScript,
                   ReactJS, NextJS, Figma, Webflow, UX/UI, Technical SEO, and
                   more.
                 </p>
