@@ -1,14 +1,16 @@
 import logo1 from '/public/images/logos/ai21.svg';
 import logo2 from '/public/images/logos/antidote.svg';
-import logo3 from '/public/images/logos/datree.svg';
+// import logo3 from '/public/images/logos/datree.svg';
 import logo4 from '/public/images/logos/everafter.svg';
 import logo5 from '/public/images/logos/lin.svg';
 import logo6 from '/public/images/logos/permit.svg';
 import logo7 from '/public/images/logos/sedric.svg';
 import logo8 from '/public/images/logos/wordtune.svg';
 import logo9 from '/public/images/logos/port.svg';
+import logo10 from '/public/images/logos/noble.svg';
 
 export const logosData = [
+  { src: logo7, alt: 'Sedric', href: 'https://www.sedric.ai/' },
   {
     src: logo5,
     alt: 'Lin Health',
@@ -20,14 +22,15 @@ export const logosData = [
     alt: 'Antidote Health',
     href: 'https://www.antidotehealth.ai/',
   },
-  { src: logo3, alt: 'Datree', href: 'https://www.datree.io/' },
+  // { src: logo3, alt: 'Datree', href: 'https://www.datree.io/' },
   {
     src: logo4,
     alt: 'EverAfter',
     href: 'https://www.everafter.ai/',
   },
   { src: logo6, alt: 'Permit', href: 'https://www.permit.io/' },
-  { src: logo7, alt: 'Sedric', href: 'https://www.sedric.ai/' },
+
   { src: logo8, alt: 'Wordtune', href: 'https://www.wordtune.com/read' },
   { src: logo9, alt: 'Port', href: 'https://www.getport.io/' },
+  { src: logo10, alt: 'Benoble', href: 'https://www.benoble.io/' },
 ];
