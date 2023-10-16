@@ -2,6 +2,7 @@ import './globals.css';
 import { Metadata } from 'next';
 import GoogleTagManeger from '@/utils/GoogleTagManager';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
 import CvButton from '@/components/layout/CvButton';
@@ -81,11 +82,16 @@ export default function RootLayout({ children }: RootProps) {
       className={`${general.variable} ${cabinetgrotesk.variable} scroll-smooth`}>
       <head>
         <GoogleTagManeger />
+        <Script
+          id='stand-with-israel-widget'
+          strategy='lazyOnload'
+          src='https://westandwithisrael.io/_functions/widget?position=bottom-left&layout=1'
+        />
       </head>
       <body
-        className={`antialiased bg-theme_black text-theme_white flex flex-col min-h-dvh justify-between w-full`}>
+        className={`flex min-h-dvh w-full flex-col justify-between bg-theme_black text-theme_white antialiased`}>
         <Navbar />
-        <main className='grow relative z-10 overflow-hidden'>{children}</main>
+        <main className='relative z-10 grow overflow-hidden'>{children}</main>
         <CvButton />
         <Footer />
       </body>
