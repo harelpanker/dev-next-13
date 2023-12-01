@@ -1,6 +1,5 @@
 import logo1 from '/public/images/logos/ai21.svg';
 import logo2 from '/public/images/logos/antidote.svg';
-// import logo3 from '/public/images/logos/datree.svg';
 import logo4 from '/public/images/logos/everafter.svg';
 import logo5 from '/public/images/logos/lin.svg';
 import logo6 from '/public/images/logos/permit.svg';
@@ -22,15 +21,13 @@ export const logosData = [
     alt: 'Antidote Health',
     href: 'https://www.antidotehealth.ai/',
   },
-  // { src: logo3, alt: 'Datree', href: 'https://www.datree.io/' },
   {
     src: logo4,
     alt: 'EverAfter',
     href: 'https://www.everafter.ai/',
   },
   { src: logo6, alt: 'Permit', href: 'https://www.permit.io/' },
-
-  { src: logo8, alt: 'Wordtune', href: 'https://www.wordtune.com/read' },
+  { src: logo8, alt: 'Wordtune', href: 'https://www.wordtune.com/' },
   { src: logo9, alt: 'Port', href: 'https://www.getport.io/' },
   { src: logo10, alt: 'Benoble', href: 'https://www.benoble.io/' },
 ];
