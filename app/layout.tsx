@@ -82,11 +82,11 @@ export default function RootLayout({ children }: RootProps) {
       className={`${general.variable} ${cabinetgrotesk.variable} scroll-smooth`}>
       <head>
         <GoogleTagManeger />
-        <Script
+        {/* <Script
           id='stand-with-israel-widget'
           strategy='lazyOnload'
           src='https://westandwithisrael.io/_functions/widget?position=bottom-left&layout=1'
-        />
+        /> */}
       </head>
       <body
         className={`flex min-h-dvh w-full flex-col justify-between bg-theme_black text-theme_white antialiased`}>
